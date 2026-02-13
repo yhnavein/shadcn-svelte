@@ -1,0 +1,13 @@
+{
+  "name": "@shadcn/root",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "workspace": null,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
