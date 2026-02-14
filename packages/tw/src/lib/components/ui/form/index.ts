@@ -10,7 +10,7 @@ import Button from './form-button.svelte';
 
 const Control = FormPrimitive.Control;
 
-const Form = Object.assign(Field, {
+Object.assign(Field, {
   Control,
   Label,
   Button,
@@ -21,7 +21,16 @@ const Form = Object.assign(Field, {
   ElementField,
 });
 
-export default Form;
+export default Field as typeof Field & {
+  Control: typeof Control;
+  Label: typeof Label;
+  Button: typeof Button;
+  FieldErrors: typeof FieldErrors;
+  Description: typeof Description;
+  Fieldset: typeof Fieldset;
+  Legend: typeof Legend;
+  ElementField: typeof ElementField;
+};
 
 export {
   Field,

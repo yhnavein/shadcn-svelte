@@ -10,7 +10,7 @@ import Close from './drawer-close.svelte';
 import Trigger from './drawer-trigger.svelte';
 import Portal from './drawer-portal.svelte';
 
-const Drawer = Object.assign(Root, {
+Object.assign(Root, {
   Content,
   Description,
   Overlay,
@@ -22,7 +22,18 @@ const Drawer = Object.assign(Root, {
   Trigger,
   Portal,
 });
-export default Drawer;
+export default Root as typeof Root & {
+  Content: typeof Content;
+  Description: typeof Description;
+  Overlay: typeof Overlay;
+  Footer: typeof Footer;
+  Header: typeof Header;
+  Title: typeof Title;
+  NestedRoot: typeof NestedRoot;
+  Close: typeof Close;
+  Trigger: typeof Trigger;
+  Portal: typeof Portal;
+};
 
 export {
   Root,

@@ -9,7 +9,7 @@ import Footer from './sheet-footer.svelte';
 import Title from './sheet-title.svelte';
 import Description from './sheet-description.svelte';
 
-const Sheet = Object.assign(Root, {
+Object.assign(Root, {
   Portal,
   Trigger,
   Close,
@@ -20,7 +20,17 @@ const Sheet = Object.assign(Root, {
   Title,
   Description,
 });
-export default Sheet;
+export default Root as typeof Root & {
+  Portal: typeof Portal;
+  Trigger: typeof Trigger;
+  Close: typeof Close;
+  Overlay: typeof Overlay;
+  Content: typeof Content;
+  Header: typeof Header;
+  Footer: typeof Footer;
+  Title: typeof Title;
+  Description: typeof Description;
+};
 
 export {
   Root,

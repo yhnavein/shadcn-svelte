@@ -16,7 +16,7 @@ import SubTrigger from './dropdown-menu-sub-trigger.svelte';
 import GroupHeading from './dropdown-menu-group-heading.svelte';
 import Portal from './dropdown-menu-portal.svelte';
 
-const DropdownMenu = Object.assign(Root, {
+Object.assign(Root, {
   Sub,
   CheckboxGroup,
   CheckboxItem,
@@ -34,7 +34,24 @@ const DropdownMenu = Object.assign(Root, {
   GroupHeading,
   Portal,
 });
-export default DropdownMenu;
+export default Root as typeof Root & {
+  Sub: typeof Sub;
+  CheckboxGroup: typeof CheckboxGroup;
+  CheckboxItem: typeof CheckboxItem;
+  Content: typeof Content;
+  Group: typeof Group;
+  Item: typeof Item;
+  Label: typeof Label;
+  RadioGroup: typeof RadioGroup;
+  RadioItem: typeof RadioItem;
+  Separator: typeof Separator;
+  Shortcut: typeof Shortcut;
+  Trigger: typeof Trigger;
+  SubContent: typeof SubContent;
+  SubTrigger: typeof SubTrigger;
+  GroupHeading: typeof GroupHeading;
+  Portal: typeof Portal;
+};
 
 export {
   CheckboxGroup,

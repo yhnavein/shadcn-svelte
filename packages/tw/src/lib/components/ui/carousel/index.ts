@@ -4,8 +4,13 @@ import Item from './carousel-item.svelte';
 import Previous from './carousel-previous.svelte';
 import Next from './carousel-next.svelte';
 
-const Carousel = Object.assign(Root, { Content, Item, Previous, Next });
-export default Carousel;
+Object.assign(Root, { Content, Item, Previous, Next });
+export default Root as typeof Root & {
+  Content: typeof Content;
+  Item: typeof Item;
+  Previous: typeof Previous;
+  Next: typeof Next;
+};
 
 export {
   Root,

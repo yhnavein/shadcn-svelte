@@ -15,7 +15,7 @@ import SubTrigger from './context-menu-sub-trigger.svelte';
 import CheckboxItem from './context-menu-checkbox-item.svelte';
 import Label from './context-menu-label.svelte';
 
-const ContextMenu = Object.assign(Root, {
+Object.assign(Root, {
   Sub,
   Portal,
   Trigger,
@@ -32,7 +32,23 @@ const ContextMenu = Object.assign(Root, {
   CheckboxItem,
   Label,
 });
-export default ContextMenu;
+export default Root as typeof Root & {
+  Sub: typeof Sub;
+  Portal: typeof Portal;
+  Trigger: typeof Trigger;
+  Group: typeof Group;
+  RadioGroup: typeof RadioGroup;
+  Item: typeof Item;
+  GroupHeading: typeof GroupHeading;
+  Content: typeof Content;
+  Shortcut: typeof Shortcut;
+  RadioItem: typeof RadioItem;
+  Separator: typeof Separator;
+  SubContent: typeof SubContent;
+  SubTrigger: typeof SubTrigger;
+  CheckboxItem: typeof CheckboxItem;
+  Label: typeof Label;
+};
 
 export {
   Root,

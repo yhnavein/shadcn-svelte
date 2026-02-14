@@ -2,8 +2,8 @@ import Root from './collapsible.svelte';
 import Trigger from './collapsible-trigger.svelte';
 import Content from './collapsible-content.svelte';
 
-const Collapsible = Object.assign(Root, { Trigger, Content });
-export default Collapsible;
+Object.assign(Root, { Trigger, Content });
+export default Root as typeof Root & { Trigger: typeof Trigger; Content: typeof Content };
 
 export {
   Root,

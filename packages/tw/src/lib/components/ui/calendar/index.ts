@@ -17,7 +17,7 @@ import Month from './calendar-month.svelte';
 import Nav from './calendar-nav.svelte';
 import Caption from './calendar-caption.svelte';
 
-const Calendar = Object.assign(Root, {
+Object.assign(Root, {
   Day,
   Cell,
   Grid,
@@ -37,7 +37,25 @@ const Calendar = Object.assign(Root, {
   Caption,
 });
 
-export default Calendar;
+export default Root as typeof Root & {
+  Day: typeof Day;
+  Cell: typeof Cell;
+  Grid: typeof Grid;
+  Header: typeof Header;
+  Months: typeof Months;
+  GridRow: typeof GridRow;
+  Heading: typeof Heading;
+  GridBody: typeof GridBody;
+  GridHead: typeof GridHead;
+  HeadCell: typeof HeadCell;
+  NextButton: typeof NextButton;
+  PrevButton: typeof PrevButton;
+  Nav: typeof Nav;
+  Month: typeof Month;
+  YearSelect: typeof YearSelect;
+  MonthSelect: typeof MonthSelect;
+  Caption: typeof Caption;
+};
 
 export {
   Day,

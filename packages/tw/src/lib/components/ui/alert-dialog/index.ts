@@ -10,7 +10,7 @@ import Overlay from './alert-dialog-overlay.svelte';
 import Content from './alert-dialog-content.svelte';
 import Description from './alert-dialog-description.svelte';
 
-const AlertDialog = Object.assign(Root, {
+Object.assign(Root, {
   Portal,
   Trigger,
   Title,
@@ -22,7 +22,18 @@ const AlertDialog = Object.assign(Root, {
   Content,
   Description,
 });
-export default AlertDialog;
+export default Root as typeof Root & {
+  Portal: typeof Portal;
+  Trigger: typeof Trigger;
+  Title: typeof Title;
+  Action: typeof Action;
+  Cancel: typeof Cancel;
+  Footer: typeof Footer;
+  Header: typeof Header;
+  Overlay: typeof Overlay;
+  Content: typeof Content;
+  Description: typeof Description;
+};
 
 export {
   Root,

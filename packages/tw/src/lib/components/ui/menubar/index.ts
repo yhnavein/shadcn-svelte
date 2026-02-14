@@ -16,7 +16,7 @@ import Label from './menubar-label.svelte';
 import GroupHeading from './menubar-group-heading.svelte';
 import Portal from './menubar-portal.svelte';
 
-const Menubar = Object.assign(Root, {
+Object.assign(Root, {
   Menu,
   Sub,
   RadioGroup,
@@ -34,7 +34,24 @@ const Menubar = Object.assign(Root, {
   GroupHeading,
   Portal,
 });
-export default Menubar;
+export default Root as typeof Root & {
+  Menu: typeof Menu;
+  Sub: typeof Sub;
+  RadioGroup: typeof RadioGroup;
+  CheckboxItem: typeof CheckboxItem;
+  Content: typeof Content;
+  Item: typeof Item;
+  Group: typeof Group;
+  RadioItem: typeof RadioItem;
+  Separator: typeof Separator;
+  Shortcut: typeof Shortcut;
+  SubContent: typeof SubContent;
+  SubTrigger: typeof SubTrigger;
+  Trigger: typeof Trigger;
+  Label: typeof Label;
+  GroupHeading: typeof GroupHeading;
+  Portal: typeof Portal;
+};
 
 export {
   Root,

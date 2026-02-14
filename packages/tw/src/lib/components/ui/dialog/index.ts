@@ -9,7 +9,7 @@ import Description from './dialog-description.svelte';
 import Trigger from './dialog-trigger.svelte';
 import Close from './dialog-close.svelte';
 
-const Dialog = Object.assign(Root, {
+Object.assign(Root, {
   Portal,
   Title,
   Footer,
@@ -20,7 +20,17 @@ const Dialog = Object.assign(Root, {
   Trigger,
   Close,
 });
-export default Dialog;
+export default Root as typeof Root & {
+  Portal: typeof Portal;
+  Title: typeof Title;
+  Footer: typeof Footer;
+  Header: typeof Header;
+  Overlay: typeof Overlay;
+  Content: typeof Content;
+  Description: typeof Description;
+  Trigger: typeof Trigger;
+  Close: typeof Close;
+};
 
 export {
   Root,

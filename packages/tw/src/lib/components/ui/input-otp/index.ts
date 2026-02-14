@@ -3,8 +3,12 @@ import Group from './input-otp-group.svelte';
 import Slot from './input-otp-slot.svelte';
 import Separator from './input-otp-separator.svelte';
 
-const InputOTP = Object.assign(Root, { Group, Slot, Separator });
-export default InputOTP;
+Object.assign(Root, { Group, Slot, Separator });
+export default Root as typeof Root & {
+  Group: typeof Group;
+  Slot: typeof Slot;
+  Separator: typeof Separator;
+};
 
 export {
   Root,

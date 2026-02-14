@@ -17,7 +17,7 @@ import Month from './range-calendar-month.svelte';
 import GridBody from './range-calendar-grid-body.svelte';
 import GridHead from './range-calendar-grid-head.svelte';
 
-const RangeCalendar = Object.assign(Root, {
+Object.assign(Root, {
   Day,
   Cell,
   Grid,
@@ -37,7 +37,25 @@ const RangeCalendar = Object.assign(Root, {
   Month,
 });
 
-export default RangeCalendar;
+export default Root as typeof Root & {
+  Day: typeof Day;
+  Cell: typeof Cell;
+  Grid: typeof Grid;
+  Header: typeof Header;
+  Months: typeof Months;
+  GridRow: typeof GridRow;
+  Heading: typeof Heading;
+  GridBody: typeof GridBody;
+  GridHead: typeof GridHead;
+  HeadCell: typeof HeadCell;
+  NextButton: typeof NextButton;
+  PrevButton: typeof PrevButton;
+  MonthSelect: typeof MonthSelect;
+  YearSelect: typeof YearSelect;
+  Caption: typeof Caption;
+  Nav: typeof Nav;
+  Month: typeof Month;
+};
 
 export {
   Day,

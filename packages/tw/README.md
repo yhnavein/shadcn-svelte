@@ -81,21 +81,21 @@ Components are exported as namespaces to avoid naming collisions:
   import { Button, Card, Accordion } from '@puredev/shadcn-svelte-tw';
 </script>
 
-<Button.Root variant="outline">Click me</Button.Root>
+<Button variant="outline">Click me</Button>
 
-<Card.Root>
+<Card>
   <Card.Header>
     <Card.Title>Hello</Card.Title>
   </Card.Header>
   <Card.Content>World</Card.Content>
-</Card.Root>
+</Card>
 
-<Accordion.Root type="single">
+<Accordion type="single">
   <Accordion.Item value="item-1">
     <Accordion.Trigger>Open</Accordion.Trigger>
     <Accordion.Content>Content here</Accordion.Content>
   </Accordion.Item>
-</Accordion.Root>
+</Accordion>
 ```
 
 ### Customizing the theme

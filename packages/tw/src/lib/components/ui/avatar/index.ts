@@ -2,8 +2,8 @@ import Root from './avatar.svelte';
 import Image from './avatar-image.svelte';
 import Fallback from './avatar-fallback.svelte';
 
-const Avatar = Object.assign(Root, { Image, Fallback });
-export default Avatar;
+Object.assign(Root, { Image, Fallback });
+export default Root as typeof Root & { Image: typeof Image; Fallback: typeof Fallback };
 
 export {
   Root,

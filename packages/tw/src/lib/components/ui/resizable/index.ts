@@ -2,9 +2,9 @@ import { Pane } from 'paneforge';
 import Handle from './resizable-handle.svelte';
 import PaneGroup from './resizable-pane-group.svelte';
 
-const Resizable = Object.assign(PaneGroup, { Pane, Handle });
+Object.assign(PaneGroup, { Pane, Handle });
 
-export default Resizable;
+export default PaneGroup as typeof PaneGroup & { Pane: typeof Pane; Handle: typeof Handle };
 
 export {
   PaneGroup,

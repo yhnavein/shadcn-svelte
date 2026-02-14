@@ -9,7 +9,7 @@ import Description from './item-description.svelte';
 import Actions from './item-actions.svelte';
 import Media from './item-media.svelte';
 
-const Item = Object.assign(Root, {
+Object.assign(Root, {
   Group,
   Separator,
   Header,
@@ -20,7 +20,17 @@ const Item = Object.assign(Root, {
   Actions,
   Media,
 });
-export default Item;
+export default Root as typeof Root & {
+  Group: typeof Group;
+  Separator: typeof Separator;
+  Header: typeof Header;
+  Footer: typeof Footer;
+  Content: typeof Content;
+  Title: typeof Title;
+  Description: typeof Description;
+  Actions: typeof Actions;
+  Media: typeof Media;
+};
 
 export {
   Root,

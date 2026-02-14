@@ -7,8 +7,16 @@ import Head from './table-head.svelte';
 import Header from './table-header.svelte';
 import Row from './table-row.svelte';
 
-const Table = Object.assign(Root, { Body, Caption, Cell, Footer, Head, Header, Row });
-export default Table;
+Object.assign(Root, { Body, Caption, Cell, Footer, Head, Header, Row });
+export default Root as typeof Root & {
+  Body: typeof Body;
+  Caption: typeof Caption;
+  Cell: typeof Cell;
+  Footer: typeof Footer;
+  Head: typeof Head;
+  Header: typeof Header;
+  Row: typeof Row;
+};
 
 export {
   Root,

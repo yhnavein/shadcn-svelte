@@ -1,8 +1,8 @@
 import Root from './radio-group.svelte';
 import Item from './radio-group-item.svelte';
 
-const RadioGroup = Object.assign(Root, { Item });
-export default RadioGroup;
+Object.assign(Root, { Item });
+export default Root as typeof Root & { Item: typeof Item };
 
 export {
   Root,

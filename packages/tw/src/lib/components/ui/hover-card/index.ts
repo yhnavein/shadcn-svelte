@@ -3,8 +3,12 @@ import Content from './hover-card-content.svelte';
 import Trigger from './hover-card-trigger.svelte';
 import Portal from './hover-card-portal.svelte';
 
-const HoverCard = Object.assign(Root, { Content, Trigger, Portal });
-export default HoverCard;
+Object.assign(Root, { Content, Trigger, Portal });
+export default Root as typeof Root & {
+  Content: typeof Content;
+  Trigger: typeof Trigger;
+  Portal: typeof Portal;
+};
 
 export {
   Root,

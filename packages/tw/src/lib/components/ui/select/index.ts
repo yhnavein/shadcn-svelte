@@ -10,7 +10,7 @@ import ScrollUpButton from './select-scroll-up-button.svelte';
 import GroupHeading from './select-group-heading.svelte';
 import Portal from './select-portal.svelte';
 
-const Select = Object.assign(Root, {
+Object.assign(Root, {
   Group,
   Label,
   Item,
@@ -22,7 +22,18 @@ const Select = Object.assign(Root, {
   GroupHeading,
   Portal,
 });
-export default Select;
+export default Root as typeof Root & {
+  Group: typeof Group;
+  Label: typeof Label;
+  Item: typeof Item;
+  Content: typeof Content;
+  Trigger: typeof Trigger;
+  Separator: typeof Separator;
+  ScrollDownButton: typeof ScrollDownButton;
+  ScrollUpButton: typeof ScrollUpButton;
+  GroupHeading: typeof GroupHeading;
+  Portal: typeof Portal;
+};
 
 export {
   Root,

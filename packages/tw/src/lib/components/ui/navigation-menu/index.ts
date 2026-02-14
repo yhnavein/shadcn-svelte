@@ -7,7 +7,7 @@ import List from './navigation-menu-list.svelte';
 import Trigger from './navigation-menu-trigger.svelte';
 import Viewport from './navigation-menu-viewport.svelte';
 
-const NavigationMenu = Object.assign(Root, {
+Object.assign(Root, {
   Content,
   Indicator,
   Item,
@@ -16,7 +16,15 @@ const NavigationMenu = Object.assign(Root, {
   Trigger,
   Viewport,
 });
-export default NavigationMenu;
+export default Root as typeof Root & {
+  Content: typeof Content;
+  Indicator: typeof Indicator;
+  Item: typeof Item;
+  Link: typeof Link;
+  List: typeof List;
+  Trigger: typeof Trigger;
+  Viewport: typeof Viewport;
+};
 
 export {
   Root,

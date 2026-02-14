@@ -6,8 +6,15 @@ import Header from './card-header.svelte';
 import Title from './card-title.svelte';
 import Action from './card-action.svelte';
 
-const Card = Object.assign(Root, { Content, Description, Footer, Header, Title, Action });
-export default Card;
+Object.assign(Root, { Content, Description, Footer, Header, Title, Action });
+export default Root as typeof Root & {
+  Content: typeof Content;
+  Description: typeof Description;
+  Footer: typeof Footer;
+  Header: typeof Header;
+  Title: typeof Title;
+  Action: typeof Action;
+};
 
 export {
   Root,

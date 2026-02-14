@@ -23,7 +23,7 @@ import Separator from './sidebar-separator.svelte';
 import Trigger from './sidebar-trigger.svelte';
 import Root from './sidebar.svelte';
 
-const Sidebar = Object.assign(Root, {
+Object.assign(Root, {
   Content,
   Footer,
   Group,
@@ -48,7 +48,31 @@ const Sidebar = Object.assign(Root, {
   Trigger,
   useSidebar,
 });
-export default Sidebar;
+export default Root as typeof Root & {
+  Content: typeof Content;
+  Footer: typeof Footer;
+  Group: typeof Group;
+  GroupAction: typeof GroupAction;
+  GroupContent: typeof GroupContent;
+  GroupLabel: typeof GroupLabel;
+  Header: typeof Header;
+  Input: typeof Input;
+  Inset: typeof Inset;
+  Menu: typeof Menu;
+  MenuAction: typeof MenuAction;
+  MenuBadge: typeof MenuBadge;
+  MenuButton: typeof MenuButton;
+  MenuItem: typeof MenuItem;
+  MenuSkeleton: typeof MenuSkeleton;
+  MenuSub: typeof MenuSub;
+  MenuSubButton: typeof MenuSubButton;
+  MenuSubItem: typeof MenuSubItem;
+  Provider: typeof Provider;
+  Rail: typeof Rail;
+  Separator: typeof Separator;
+  Trigger: typeof Trigger;
+  useSidebar: typeof useSidebar;
+};
 
 export {
   Content,

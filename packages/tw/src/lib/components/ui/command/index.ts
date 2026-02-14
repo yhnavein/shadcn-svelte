@@ -10,7 +10,7 @@ import Separator from './command-separator.svelte';
 import Shortcut from './command-shortcut.svelte';
 import LinkItem from './command-link-item.svelte';
 
-const Command = Object.assign(Root, {
+Object.assign(Root, {
   Loading,
   Dialog,
   Empty,
@@ -22,7 +22,18 @@ const Command = Object.assign(Root, {
   Shortcut,
   LinkItem,
 });
-export default Command;
+export default Root as typeof Root & {
+  Loading: typeof Loading;
+  Dialog: typeof Dialog;
+  Empty: typeof Empty;
+  Group: typeof Group;
+  Item: typeof Item;
+  Input: typeof Input;
+  List: typeof List;
+  Separator: typeof Separator;
+  Shortcut: typeof Shortcut;
+  LinkItem: typeof LinkItem;
+};
 
 export {
   Root,

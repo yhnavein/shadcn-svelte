@@ -8,7 +8,7 @@ import Ellipsis from './pagination-ellipsis.svelte';
 import Previous from './pagination-previous.svelte';
 import Next from './pagination-next.svelte';
 
-const Pagination = Object.assign(Root, {
+Object.assign(Root, {
   Content,
   Item,
   Link,
@@ -18,7 +18,16 @@ const Pagination = Object.assign(Root, {
   Previous,
   Next,
 });
-export default Pagination;
+export default Root as typeof Root & {
+  Content: typeof Content;
+  Item: typeof Item;
+  Link: typeof Link;
+  PrevButton: typeof PrevButton;
+  NextButton: typeof NextButton;
+  Ellipsis: typeof Ellipsis;
+  Previous: typeof Previous;
+  Next: typeof Next;
+};
 
 export {
   Root,

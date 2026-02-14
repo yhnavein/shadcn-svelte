@@ -1,8 +1,8 @@
 import Root from './kbd.svelte';
 import Group from './kbd-group.svelte';
 
-const Kbd = Object.assign(Root, { Group });
-export default Kbd;
+Object.assign(Root, { Group });
+export default Root as typeof Root & { Group: typeof Group };
 
 export {
   Root,
