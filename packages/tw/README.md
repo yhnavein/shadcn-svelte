@@ -20,15 +20,26 @@ npm i @puredev/shadcn-svelte-tw tailwindcss tw-animate-css
 bun i @puredev/shadcn-svelte-tw tailwindcss tw-animate-css
 ```
 
-Your project also needs the Tailwind CSS Vite plugin. If you don't have it yet:
+### Tailwind CSS v4 Setup
+
+This library requires Tailwind CSS v4 to be configured in your project. If you already have Tailwind working, skip this section.
+
+Tailwind v4 needs a build tool integration to process its CSS directives. Pick the one that matches your setup:
+
+| Build tool               | Package                | Docs                                                                                                     |
+| ------------------------ | ---------------------- | -------------------------------------------------------------------------------------------------------- |
+| Vite (SvelteKit default) | `@tailwindcss/vite`    | [tailwindcss.com/docs/installation/vite](https://tailwindcss.com/docs/installation/vite)                 |
+| PostCSS                  | `@tailwindcss/postcss` | [tailwindcss.com/docs/installation/postcss](https://tailwindcss.com/docs/installation/postcss)           |
+| CLI                      | `@tailwindcss/cli`     | [tailwindcss.com/docs/installation/tailwind-cli](https://tailwindcss.com/docs/installation/tailwind-cli) |
+
+Most SvelteKit projects use Vite, so the typical setup is:
 
 ```sh
 npm i -D @tailwindcss/vite
 ```
 
-And register it in your `vite.config.ts`:
-
 ```ts
+// vite.config.ts
 import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vite';
