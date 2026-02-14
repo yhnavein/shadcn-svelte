@@ -1,0 +1,6 @@
+{
+  "editor.insertSpaces": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  }
+}
