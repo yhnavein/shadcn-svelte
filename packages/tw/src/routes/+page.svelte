@@ -15,6 +15,7 @@
     Switch,
     Table,
     Tabs,
+    Resizable,
   } from '$lib';
 
   let switchChecked = $state(false);
@@ -318,5 +319,35 @@
         </Table.Row>
       </Table.Body>
     </Table>
+  </section>
+
+  <Separator />
+
+  <!-- Resizable -->
+  <section class="space-y-3">
+    <h2 class="text-xl font-semibold">Resizable</h2>
+    <Resizable direction="horizontal">
+      <Resizable.Pane>
+        <Resizable direction="vertical">
+          <Resizable.Pane>
+            <div class="h-full w-full bg-gray-500">
+              <p>Hello</p>
+            </div>
+          </Resizable.Pane>
+          <Resizable.Handle />
+          <Resizable.Pane>
+            <div class="h-full w-full bg-orange-500">
+              <p>World</p>
+            </div>
+          </Resizable.Pane>
+        </Resizable>
+      </Resizable.Pane>
+      <Resizable.Handle />
+      <Resizable.Pane>
+        <div class="h-[200px] w-full bg-violet-500">
+          <p>Galaxy</p>
+        </div>
+      </Resizable.Pane>
+    </Resizable>
   </section>
 </div>
