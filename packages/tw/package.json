@@ -30,7 +30,9 @@
     "./theme.css": "./dist/theme.css"
   },
   "peerDependencies": {
-    "svelte": "^5.0.0"
+    "svelte": "^5.0.0",
+    "tailwindcss": "^4.0.0",
+    "tw-animate-css": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/compat": "2.0.2",

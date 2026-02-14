@@ -1,5 +1,5 @@
 <script lang="ts">
-  import '$lib/theme.css';
+  import './app.css';
 
   const { children } = $props();
 </script>
