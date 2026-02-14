@@ -1,0 +1,24 @@
+{
+  "name": "@puredev/shadcn-svelte-tw",
+  "type": "module",
+  "license": "MIT",
+  "keywords": [
+    "shadcn",
+    "svelte",
+    "tailwind",
+    "SvelteKit",
+    "component library"
+  ],
+  "author": "PureDev <admin@puredev.eu>",
+  "description": "A Shadcn Svelte component library built for simple and easy use in SvelteKit projects.",
+  "version": "0.0.1",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/puredev/shadcn"
+  },
+  "bugs": {
+    "url": "https://github.com/puredev/shadcn/issues"
+  },
+  "homepage": "https://github.com/puredev/shadcn"
+}

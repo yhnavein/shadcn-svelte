@@ -3,7 +3,10 @@
   "module": "index.ts",
   "type": "module",
   "private": true,
-  "workspace": null,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
   "devDependencies": {
     "@types/bun": "latest"
   },
