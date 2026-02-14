@@ -6,6 +6,9 @@ import Link from './breadcrumb-link.svelte';
 import List from './breadcrumb-list.svelte';
 import Page from './breadcrumb-page.svelte';
 
+const Breadcrumb = Object.assign(Root, { Ellipsis, Item, Separator, Link, List, Page });
+export default Breadcrumb;
+
 export {
   Root,
   Ellipsis,

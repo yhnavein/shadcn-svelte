@@ -9,6 +9,19 @@ import Footer from './sheet-footer.svelte';
 import Title from './sheet-title.svelte';
 import Description from './sheet-description.svelte';
 
+const Sheet = Object.assign(Root, {
+  Portal,
+  Trigger,
+  Close,
+  Overlay,
+  Content,
+  Header,
+  Footer,
+  Title,
+  Description,
+});
+export default Sheet;
+
 export {
   Root,
   Close,

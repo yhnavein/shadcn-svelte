@@ -9,6 +9,19 @@ import Description from './item-description.svelte';
 import Actions from './item-actions.svelte';
 import Media from './item-media.svelte';
 
+const Item = Object.assign(Root, {
+  Group,
+  Separator,
+  Header,
+  Footer,
+  Content,
+  Title,
+  Description,
+  Actions,
+  Media,
+});
+export default Item;
+
 export {
   Root,
   Group,

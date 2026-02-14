@@ -28,46 +28,46 @@
     <p class="text-muted-foreground mt-1">Quick preview of @puredev/shadcn-svelte-tw components</p>
   </div>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Buttons -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Buttons</h2>
     <div class="flex flex-wrap gap-3">
-      <Button.Root>Default</Button.Root>
-      <Button.Root variant="secondary">Secondary</Button.Root>
-      <Button.Root variant="destructive">Destructive</Button.Root>
-      <Button.Root variant="outline">Outline</Button.Root>
-      <Button.Root variant="ghost">Ghost</Button.Root>
-      <Button.Root variant="link">Link</Button.Root>
-      <Button.Root disabled>Disabled</Button.Root>
+      <Button>Default</Button>
+      <Button variant="secondary">Secondary</Button>
+      <Button variant="destructive">Destructive</Button>
+      <Button variant="outline">Outline</Button>
+      <Button variant="ghost">Ghost</Button>
+      <Button variant="link">Link</Button>
+      <Button disabled>Disabled</Button>
     </div>
     <div class="flex flex-wrap gap-3">
-      <Button.Root size="sm">Small</Button.Root>
-      <Button.Root size="default">Default</Button.Root>
-      <Button.Root size="lg">Large</Button.Root>
+      <Button size="sm">Small</Button>
+      <Button size="default">Default</Button>
+      <Button size="lg">Large</Button>
     </div>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Badges -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Badges</h2>
     <div class="flex flex-wrap gap-3">
-      <Badge.Badge>Default</Badge.Badge>
-      <Badge.Badge variant="secondary">Secondary</Badge.Badge>
-      <Badge.Badge variant="destructive">Destructive</Badge.Badge>
-      <Badge.Badge variant="outline">Outline</Badge.Badge>
+      <Badge>Default</Badge>
+      <Badge variant="secondary">Secondary</Badge>
+      <Badge variant="destructive">Destructive</Badge>
+      <Badge variant="outline">Outline</Badge>
     </div>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Card -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Card</h2>
-    <Card.Root class="w-full max-w-sm">
+    <Card class="w-full max-w-sm">
       <Card.Header>
         <Card.Title>Card Title</Card.Title>
         <Card.Description>Card description goes here.</Card.Description>
@@ -76,18 +76,18 @@
         <p>This is the card content area. You can place any content here.</p>
       </Card.Content>
       <Card.Footer class="flex justify-end gap-2">
-        <Button.Root variant="outline">Cancel</Button.Root>
-        <Button.Root>Save</Button.Root>
+        <Button variant="outline">Cancel</Button>
+        <Button>Save</Button>
       </Card.Footer>
-    </Card.Root>
+    </Card>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Accordion -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Accordion</h2>
-    <Accordion.Root type="single" class="w-full">
+    <Accordion type="single" class="w-full">
       <Accordion.Item value="item-1">
         <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
         <Accordion.Content>Yes. It adheres to the WAI-ARIA design pattern.</Accordion.Content>
@@ -104,64 +104,64 @@
           Yes. It's animated by default, using CSS animations from tw-animate-css.
         </Accordion.Content>
       </Accordion.Item>
-    </Accordion.Root>
+    </Accordion>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Tabs -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Tabs</h2>
-    <Tabs.Root value="account">
+    <Tabs value="account">
       <Tabs.List>
         <Tabs.Trigger value="account">Account</Tabs.Trigger>
         <Tabs.Trigger value="password">Password</Tabs.Trigger>
         <Tabs.Trigger value="settings">Settings</Tabs.Trigger>
       </Tabs.List>
       <Tabs.Content value="account">
-        <Card.Root>
+        <Card>
           <Card.Header>
             <Card.Title>Account</Card.Title>
             <Card.Description>Make changes to your account here.</Card.Description>
           </Card.Header>
           <Card.Content class="space-y-3">
             <div class="space-y-1">
-              <Label.Root for="name">Name</Label.Root>
-              <Input.Root id="name" value="John Doe" />
+              <Label for="name">Name</Label>
+              <Input id="name" value="John Doe" />
             </div>
             <div class="space-y-1">
-              <Label.Root for="email">Email</Label.Root>
-              <Input.Root id="email" value="john@example.com" />
+              <Label for="email">Email</Label>
+              <Input id="email" value="john@example.com" />
             </div>
           </Card.Content>
           <Card.Footer>
-            <Button.Root>Save changes</Button.Root>
+            <Button>Save changes</Button>
           </Card.Footer>
-        </Card.Root>
+        </Card>
       </Tabs.Content>
       <Tabs.Content value="password">
-        <Card.Root>
+        <Card>
           <Card.Header>
             <Card.Title>Password</Card.Title>
             <Card.Description>Change your password here.</Card.Description>
           </Card.Header>
           <Card.Content class="space-y-3">
             <div class="space-y-1">
-              <Label.Root for="current">Current password</Label.Root>
-              <Input.Root id="current" type="password" />
+              <Label for="current">Current password</Label>
+              <Input id="current" type="password" />
             </div>
             <div class="space-y-1">
-              <Label.Root for="new">New password</Label.Root>
-              <Input.Root id="new" type="password" />
+              <Label for="new">New password</Label>
+              <Input id="new" type="password" />
             </div>
           </Card.Content>
           <Card.Footer>
-            <Button.Root>Update password</Button.Root>
+            <Button>Update password</Button>
           </Card.Footer>
-        </Card.Root>
+        </Card>
       </Tabs.Content>
       <Tabs.Content value="settings">
-        <Card.Root>
+        <Card>
           <Card.Header>
             <Card.Title>Settings</Card.Title>
             <Card.Description>Manage your preferences.</Card.Description>
@@ -169,119 +169,119 @@
           <Card.Content>
             <p class="text-muted-foreground text-sm">Settings content goes here.</p>
           </Card.Content>
-        </Card.Root>
+        </Card>
       </Tabs.Content>
-    </Tabs.Root>
+    </Tabs>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Alert -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Alerts</h2>
-    <Alert.Root>
+    <Alert>
       <Alert.Title>Heads up!</Alert.Title>
       <Alert.Description>You can add components to your app using the CLI.</Alert.Description>
-    </Alert.Root>
-    <Alert.Root variant="destructive">
+    </Alert>
+    <Alert variant="destructive">
       <Alert.Title>Error</Alert.Title>
       <Alert.Description>Your session has expired. Please log in again.</Alert.Description>
-    </Alert.Root>
+    </Alert>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Form controls -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Form Controls</h2>
     <div class="grid max-w-sm gap-4">
       <div class="space-y-1">
-        <Label.Root for="demo-input">Input</Label.Root>
-        <Input.Root id="demo-input" placeholder="Type something..." />
+        <Label for="demo-input">Input</Label>
+        <Input id="demo-input" placeholder="Type something..." />
       </div>
 
       <div class="flex items-center gap-2">
-        <Checkbox.Root
+        <Checkbox
           id="demo-checkbox"
           checked={checkboxChecked}
           onCheckedChange={(v) => (checkboxChecked = !!v)}
         />
-        <Label.Root for="demo-checkbox">Accept terms and conditions</Label.Root>
+        <Label for="demo-checkbox">Accept terms and conditions</Label>
       </div>
 
       <div class="flex items-center gap-2">
-        <Switch.Root id="demo-switch" bind:checked={switchChecked} />
-        <Label.Root for="demo-switch">
+        <Switch id="demo-switch" bind:checked={switchChecked} />
+        <Label for="demo-switch">
           Airplane mode {switchChecked ? '(on)' : '(off)'}
-        </Label.Root>
+        </Label>
       </div>
     </div>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Progress -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Progress</h2>
-    <Progress.Root value={progressValue} class="max-w-sm" />
+    <Progress value={progressValue} class="max-w-sm" />
     <div class="flex gap-2">
-      <Button.Root
+      <Button
         size="sm"
         variant="outline"
         onclick={() => (progressValue = Math.max(0, progressValue - 10))}
       >
         -10
-      </Button.Root>
-      <Button.Root
+      </Button>
+      <Button
         size="sm"
         variant="outline"
         onclick={() => (progressValue = Math.min(100, progressValue + 10))}
       >
         +10
-      </Button.Root>
+      </Button>
       <span class="text-muted-foreground text-sm leading-8">{progressValue}%</span>
     </div>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Avatar -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Avatars</h2>
     <div class="flex gap-3">
-      <Avatar.Root>
+      <Avatar>
         <Avatar.Image src="https://github.com/shadcn.png" alt="shadcn avatar" />
         <Avatar.Fallback>CN</Avatar.Fallback>
-      </Avatar.Root>
-      <Avatar.Root>
+      </Avatar>
+      <Avatar>
         <Avatar.Fallback>AB</Avatar.Fallback>
-      </Avatar.Root>
-      <Avatar.Root>
+      </Avatar>
+      <Avatar>
         <Avatar.Fallback>PD</Avatar.Fallback>
-      </Avatar.Root>
+      </Avatar>
     </div>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Skeleton -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Skeleton</h2>
     <div class="flex items-center gap-4">
-      <Skeleton.Root class="size-12 rounded-full" />
+      <Skeleton class="size-12 rounded-full" />
       <div class="space-y-2">
-        <Skeleton.Root class="h-4 w-48" />
-        <Skeleton.Root class="h-4 w-32" />
+        <Skeleton class="h-4 w-48" />
+        <Skeleton class="h-4 w-32" />
       </div>
     </div>
   </section>
 
-  <Separator.Root />
+  <Separator />
 
   <!-- Table -->
   <section class="space-y-3">
     <h2 class="text-xl font-semibold">Table</h2>
-    <Table.Root>
+    <Table>
       <Table.Header>
         <Table.Row>
           <Table.Head>Invoice</Table.Head>
@@ -294,7 +294,7 @@
         <Table.Row>
           <Table.Cell class="font-medium">INV-001</Table.Cell>
           <Table.Cell>
-            <Badge.Badge variant="outline">Paid</Badge.Badge>
+            <Badge variant="outline">Paid</Badge>
           </Table.Cell>
           <Table.Cell>Credit Card</Table.Cell>
           <Table.Cell class="text-right">$250.00</Table.Cell>
@@ -302,7 +302,7 @@
         <Table.Row>
           <Table.Cell class="font-medium">INV-002</Table.Cell>
           <Table.Cell>
-            <Badge.Badge variant="secondary">Pending</Badge.Badge>
+            <Badge variant="secondary">Pending</Badge>
           </Table.Cell>
           <Table.Cell>PayPal</Table.Cell>
           <Table.Cell class="text-right">$150.00</Table.Cell>
@@ -310,12 +310,12 @@
         <Table.Row>
           <Table.Cell class="font-medium">INV-003</Table.Cell>
           <Table.Cell>
-            <Badge.Badge variant="destructive">Overdue</Badge.Badge>
+            <Badge variant="destructive">Overdue</Badge>
           </Table.Cell>
           <Table.Cell>Bank Transfer</Table.Cell>
           <Table.Cell class="text-right">$350.00</Table.Cell>
         </Table.Row>
       </Table.Body>
-    </Table.Root>
+    </Table>
   </section>
 </div>

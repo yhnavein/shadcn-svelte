@@ -3,6 +3,9 @@ import Content from './tabs-content.svelte';
 import List from './tabs-list.svelte';
 import Trigger from './tabs-trigger.svelte';
 
+const Tabs = Object.assign(Root, { Content, List, Trigger });
+export default Tabs;
+
 export {
   Root,
   Content,

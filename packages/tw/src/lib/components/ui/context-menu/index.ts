@@ -15,6 +15,25 @@ import SubTrigger from './context-menu-sub-trigger.svelte';
 import CheckboxItem from './context-menu-checkbox-item.svelte';
 import Label from './context-menu-label.svelte';
 
+const ContextMenu = Object.assign(Root, {
+  Sub,
+  Portal,
+  Trigger,
+  Group,
+  RadioGroup,
+  Item,
+  GroupHeading,
+  Content,
+  Shortcut,
+  RadioItem,
+  Separator,
+  SubContent,
+  SubTrigger,
+  CheckboxItem,
+  Label,
+});
+export default ContextMenu;
+
 export {
   Root,
   Sub,

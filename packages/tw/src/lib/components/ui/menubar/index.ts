@@ -16,6 +16,26 @@ import Label from './menubar-label.svelte';
 import GroupHeading from './menubar-group-heading.svelte';
 import Portal from './menubar-portal.svelte';
 
+const Menubar = Object.assign(Root, {
+  Menu,
+  Sub,
+  RadioGroup,
+  CheckboxItem,
+  Content,
+  Item,
+  Group,
+  RadioItem,
+  Separator,
+  Shortcut,
+  SubContent,
+  SubTrigger,
+  Trigger,
+  Label,
+  GroupHeading,
+  Portal,
+});
+export default Menubar;
+
 export {
   Root,
   CheckboxItem,

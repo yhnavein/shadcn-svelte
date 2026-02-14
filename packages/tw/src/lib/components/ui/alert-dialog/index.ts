@@ -10,6 +10,20 @@ import Overlay from './alert-dialog-overlay.svelte';
 import Content from './alert-dialog-content.svelte';
 import Description from './alert-dialog-description.svelte';
 
+const AlertDialog = Object.assign(Root, {
+  Portal,
+  Trigger,
+  Title,
+  Action,
+  Cancel,
+  Footer,
+  Header,
+  Overlay,
+  Content,
+  Description,
+});
+export default AlertDialog;
+
 export {
   Root,
   Title,

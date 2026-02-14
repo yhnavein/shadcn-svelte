@@ -9,6 +9,19 @@ import Description from './dialog-description.svelte';
 import Trigger from './dialog-trigger.svelte';
 import Close from './dialog-close.svelte';
 
+const Dialog = Object.assign(Root, {
+  Portal,
+  Title,
+  Footer,
+  Header,
+  Overlay,
+  Content,
+  Description,
+  Trigger,
+  Close,
+});
+export default Dialog;
+
 export {
   Root,
   Title,

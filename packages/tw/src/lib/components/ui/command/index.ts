@@ -10,6 +10,20 @@ import Separator from './command-separator.svelte';
 import Shortcut from './command-shortcut.svelte';
 import LinkItem from './command-link-item.svelte';
 
+const Command = Object.assign(Root, {
+  Loading,
+  Dialog,
+  Empty,
+  Group,
+  Item,
+  Input,
+  List,
+  Separator,
+  Shortcut,
+  LinkItem,
+});
+export default Command;
+
 export {
   Root,
   Dialog,

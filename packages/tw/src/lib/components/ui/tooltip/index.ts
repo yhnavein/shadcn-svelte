@@ -4,6 +4,9 @@ import Content from './tooltip-content.svelte';
 import Provider from './tooltip-provider.svelte';
 import Portal from './tooltip-portal.svelte';
 
+const Tooltip = Object.assign(Root, { Trigger, Content, Provider, Portal });
+export default Tooltip;
+
 export {
   Root,
   Trigger,

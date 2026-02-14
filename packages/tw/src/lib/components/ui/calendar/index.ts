@@ -17,6 +17,28 @@ import Month from './calendar-month.svelte';
 import Nav from './calendar-nav.svelte';
 import Caption from './calendar-caption.svelte';
 
+const Calendar = Object.assign(Root, {
+  Day,
+  Cell,
+  Grid,
+  Header,
+  Months,
+  GridRow,
+  Heading,
+  GridBody,
+  GridHead,
+  HeadCell,
+  NextButton,
+  PrevButton,
+  Nav,
+  Month,
+  YearSelect,
+  MonthSelect,
+  Caption,
+});
+
+export default Calendar;
+
 export {
   Day,
   Cell,

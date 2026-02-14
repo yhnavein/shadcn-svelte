@@ -5,6 +5,9 @@ import Input from './input-group-input.svelte';
 import Text from './input-group-text.svelte';
 import Textarea from './input-group-textarea.svelte';
 
+const InputGroup = Object.assign(Root, { Addon, Button, Input, Text, Textarea });
+export default InputGroup;
+
 export {
   Root,
   Addon,

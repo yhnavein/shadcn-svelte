@@ -16,6 +16,26 @@ import SubTrigger from './dropdown-menu-sub-trigger.svelte';
 import GroupHeading from './dropdown-menu-group-heading.svelte';
 import Portal from './dropdown-menu-portal.svelte';
 
+const DropdownMenu = Object.assign(Root, {
+  Sub,
+  CheckboxGroup,
+  CheckboxItem,
+  Content,
+  Group,
+  Item,
+  Label,
+  RadioGroup,
+  RadioItem,
+  Separator,
+  Shortcut,
+  Trigger,
+  SubContent,
+  SubTrigger,
+  GroupHeading,
+  Portal,
+});
+export default DropdownMenu;
+
 export {
   CheckboxGroup,
   CheckboxItem,

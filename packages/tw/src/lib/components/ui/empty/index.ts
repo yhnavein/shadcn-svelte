@@ -5,6 +5,9 @@ import Title from './empty-title.svelte';
 import Description from './empty-description.svelte';
 import Content from './empty-content.svelte';
 
+const Empty = Object.assign(Root, { Header, Media, Title, Description, Content });
+export default Empty;
+
 export {
   Root,
   Header,

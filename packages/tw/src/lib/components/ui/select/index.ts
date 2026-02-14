@@ -10,6 +10,20 @@ import ScrollUpButton from './select-scroll-up-button.svelte';
 import GroupHeading from './select-group-heading.svelte';
 import Portal from './select-portal.svelte';
 
+const Select = Object.assign(Root, {
+  Group,
+  Label,
+  Item,
+  Content,
+  Trigger,
+  Separator,
+  ScrollDownButton,
+  ScrollUpButton,
+  GroupHeading,
+  Portal,
+});
+export default Select;
+
 export {
   Root,
   Group,

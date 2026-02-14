@@ -10,6 +10,20 @@ import Close from './drawer-close.svelte';
 import Trigger from './drawer-trigger.svelte';
 import Portal from './drawer-portal.svelte';
 
+const Drawer = Object.assign(Root, {
+  Content,
+  Description,
+  Overlay,
+  Footer,
+  Header,
+  Title,
+  NestedRoot,
+  Close,
+  Trigger,
+  Portal,
+});
+export default Drawer;
+
 export {
   Root,
   NestedRoot,

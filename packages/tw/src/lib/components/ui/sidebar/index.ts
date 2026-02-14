@@ -23,6 +23,33 @@ import Separator from './sidebar-separator.svelte';
 import Trigger from './sidebar-trigger.svelte';
 import Root from './sidebar.svelte';
 
+const Sidebar = Object.assign(Root, {
+  Content,
+  Footer,
+  Group,
+  GroupAction,
+  GroupContent,
+  GroupLabel,
+  Header,
+  Input,
+  Inset,
+  Menu,
+  MenuAction,
+  MenuBadge,
+  MenuButton,
+  MenuItem,
+  MenuSkeleton,
+  MenuSub,
+  MenuSubButton,
+  MenuSubItem,
+  Provider,
+  Rail,
+  Separator,
+  Trigger,
+  useSidebar,
+});
+export default Sidebar;
+
 export {
   Content,
   Footer,

@@ -7,6 +7,17 @@ import List from './navigation-menu-list.svelte';
 import Trigger from './navigation-menu-trigger.svelte';
 import Viewport from './navigation-menu-viewport.svelte';
 
+const NavigationMenu = Object.assign(Root, {
+  Content,
+  Indicator,
+  Item,
+  Link,
+  List,
+  Trigger,
+  Viewport,
+});
+export default NavigationMenu;
+
 export {
   Root,
   Content,

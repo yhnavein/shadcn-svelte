@@ -9,6 +9,20 @@ import Description from './field-description.svelte';
 import Separator from './field-separator.svelte';
 import Error from './field-error.svelte';
 
+const FieldComponent = Object.assign(Field, {
+  Set,
+  Legend,
+  Group,
+  Content,
+  Label,
+  Title,
+  Description,
+  Separator,
+  Error,
+});
+
+export default FieldComponent;
+
 export {
   Field,
   Set,

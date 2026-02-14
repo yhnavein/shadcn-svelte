@@ -5,6 +5,8 @@ import Root, {
   buttonVariants,
 } from './button.svelte';
 
+export default Root;
+
 export {
   Root,
   type ButtonProps as Props,
