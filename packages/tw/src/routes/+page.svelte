@@ -41,6 +41,7 @@
       <Button variant="ghost">Ghost</Button>
       <Button variant="link">Link</Button>
       <Button disabled>Disabled</Button>
+      <Button isLoading>Send</Button>
     </div>
     <div class="flex flex-wrap gap-3">
       <Button size="sm">Small</Button>
