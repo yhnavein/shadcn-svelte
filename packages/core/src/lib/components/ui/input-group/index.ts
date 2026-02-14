@@ -1,0 +1,31 @@
+import Root from './input-group.svelte';
+import Addon from './input-group-addon.svelte';
+import Button from './input-group-button.svelte';
+import Input from './input-group-input.svelte';
+import Text from './input-group-text.svelte';
+import Textarea from './input-group-textarea.svelte';
+
+Object.assign(Root, { Addon, Button, Input, Text, Textarea });
+export default Root as typeof Root & {
+  Addon: typeof Addon;
+  Button: typeof Button;
+  Input: typeof Input;
+  Text: typeof Text;
+  Textarea: typeof Textarea;
+};
+
+export {
+  Root,
+  Addon,
+  Button,
+  Input,
+  Text,
+  Textarea,
+  //
+  Root as InputGroup,
+  Addon as InputGroupAddon,
+  Button as InputGroupButton,
+  Input as InputGroupInput,
+  Text as InputGroupText,
+  Textarea as InputGroupTextarea,
+};
