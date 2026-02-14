@@ -10,6 +10,6 @@
   }: WithElementRef<HTMLAttributes<HTMLElement>> = $props();
 </script>
 
-<div {...restProps} bind:this={ref} class={cn('flex flex-col', className)}>
+<div {...restProps} bind:this={ref} class={cn('sh-calendar__month', className)}>
   {@render children?.()}
 </div>

@@ -1,0 +1,31 @@
+.sh-item {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  transition: background-color 0.2s;
+}
+
+.sh-item:hover {
+  background-color: color-mix(in srgb, var(--muted), transparent 50%);
+}
+
+.sh-item__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sh-item__title {
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.sh-item__description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}

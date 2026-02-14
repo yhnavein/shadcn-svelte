@@ -1,11 +1,10 @@
 <script lang="ts" module>
   import { getContext, setContext } from 'svelte';
-  import type { VariantProps } from 'tailwind-variants';
-  import { toggleVariants } from '$lib/components/ui/toggle/index.js';
+  import type { ToggleVariant, ToggleSize } from '$lib/components/ui/toggle/index.js';
 
-  type ToggleVariants = VariantProps<typeof toggleVariants>;
-
-  interface ToggleGroupContext extends ToggleVariants {
+  interface ToggleGroupContext {
+    variant?: ToggleVariant;
+    size?: ToggleSize;
     spacing?: number;
   }
 
@@ -30,8 +29,11 @@
     spacing = 0,
     variant = 'default',
     ...restProps
-  }: ToggleGroupPrimitive.RootProps &
-    ToggleVariants & { spacing?: number } = $props();
+  }: ToggleGroupPrimitive.RootProps & {
+    variant?: ToggleVariant;
+    size?: ToggleSize;
+    spacing?: number;
+  } = $props();
 
   setToggleGroupCtx({
     variant,
@@ -51,10 +53,6 @@ get along, so we shut typescript up by casting `value` to `never`.
   data-variant={variant}
   data-size={size}
   data-spacing={spacing}
-  style={`--gap: ${spacing}`}
-  class={cn(
-    'group/toggle-group flex w-fit items-center gap-[--spacing(var(--gap))] rounded-md data-[spacing=default]:data-[variant=outline]:shadow-xs',
-    className
-  )}
+  class={cn('sh-toggle-group', className)}
   {...restProps}
 />

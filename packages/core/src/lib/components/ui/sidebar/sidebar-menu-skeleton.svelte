@@ -21,14 +21,14 @@
   bind:this={ref}
   data-slot="sidebar-menu-skeleton"
   data-sidebar="menu-skeleton"
-  class={cn('flex h-8 items-center gap-2 rounded-md px-2', className)}
+  class={cn('sh-sidebar-menu-skeleton', className)}
   {...restProps}
 >
   {#if showIcon}
-    <Skeleton class="size-4 rounded-md" data-sidebar="menu-skeleton-icon" />
+    <Skeleton class="sh-sidebar-menu-skeleton-icon" data-sidebar="menu-skeleton-icon" />
   {/if}
   <Skeleton
-    class="h-4 max-w-(--skeleton-width) flex-1"
+    class="sh-sidebar-menu-skeleton-text"
     data-sidebar="menu-skeleton-text"
     style="--skeleton-width: {width};"
   />

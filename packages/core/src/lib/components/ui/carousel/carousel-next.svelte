@@ -21,13 +21,9 @@
   {variant}
   {size}
   aria-disabled={!emblaCtx.canScrollNext}
-  class={cn(
-    'absolute size-8 rounded-full',
-    emblaCtx.orientation === 'horizontal'
-      ? '-end-12 top-1/2 -translate-y-1/2'
-      : 'start-1/2 -bottom-12 -translate-x-1/2 rotate-90',
-    className
-  )}
+  class={cn('sh-carousel__nav', className)}
+  data-orientation={emblaCtx.orientation}
+  data-variant="next"
   onclick={emblaCtx.scrollNext}
   onkeydown={emblaCtx.handleKeyDown}
   bind:ref

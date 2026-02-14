@@ -1,0 +1,84 @@
+@layer base {
+  .sh-command {
+    @apply flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground;
+  }
+
+  .sh-command__input-wrapper {
+    @apply flex h-9 items-center gap-2 border-b px-3;
+  }
+
+  .sh-command__search-icon {
+    @apply size-4 shrink-0 opacity-50;
+  }
+
+  .sh-command__input {
+    @apply flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .sh-command__list {
+    @apply max-h-[300px] overflow-x-hidden overflow-y-auto;
+  }
+
+  .sh-command__empty {
+    @apply py-6 text-center text-sm;
+  }
+
+  .sh-command__group {
+    @apply overflow-hidden p-1 text-foreground;
+  }
+
+  .sh-command__group [cmdk-group-heading] {
+    @apply px-2 py-1.5 text-xs font-medium text-muted-foreground;
+  }
+
+  .sh-command__item {
+    @apply relative flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none;
+    @apply data-[disabled]:pointer-events-none data-[disabled]:opacity-50;
+    @apply aria-selected:bg-accent aria-selected:text-accent-foreground;
+  }
+
+  .sh-command__item svg {
+    @apply pointer-events-none shrink-0 size-4;
+  }
+
+  .sh-command__item svg:not([class*='text-']) {
+    @apply text-muted-foreground;
+  }
+
+  .sh-command__shortcut {
+    @apply ml-auto text-xs tracking-widest text-muted-foreground;
+  }
+
+  .sh-command__separator {
+    @apply -mx-1 h-px bg-border;
+  }
+
+  /* Command Dialog Overrides */
+  .sh-command-dialog .sh-command__input-wrapper {
+    @apply h-12;
+  }
+
+  .sh-command-dialog .sh-command__input-wrapper svg {
+    @apply h-5 w-5;
+  }
+
+  .sh-command-dialog .sh-command__input {
+    @apply h-12;
+  }
+
+  .sh-command-dialog .sh-command__group {
+    @apply px-2;
+  }
+
+  .sh-command-dialog .sh-command__group:not([hidden]) ~ .sh-command__group {
+    @apply pt-0;
+  }
+
+  .sh-command-dialog .sh-command__item {
+    @apply px-2 py-3;
+  }
+
+  .sh-command-dialog .sh-command__item svg {
+    @apply h-5 w-5;
+  }
+}

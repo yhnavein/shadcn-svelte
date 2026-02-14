@@ -45,10 +45,7 @@
   bind:placeholder
   {weekdayFormat}
   {disableDaysOutsideMonth}
-  class={cn(
-    'bg-background group/calendar p-3 [--cell-size:--spacing(8)] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent',
-    className
-  )}
+  class={cn('sh-calendar', className)}
   {locale}
   {monthFormat}
   {yearFormat}
@@ -78,7 +75,7 @@
 
           <RangeCalendar.Grid>
             <RangeCalendar.GridHead>
-              <RangeCalendar.GridRow class="select-none">
+              <RangeCalendar.GridRow class="sh-calendar__row--head">
                 {#each weekdays as weekday (weekday)}
                   <RangeCalendar.HeadCell>
                     {weekday.slice(0, 2)}
@@ -88,7 +85,7 @@
             </RangeCalendar.GridHead>
             <RangeCalendar.GridBody>
               {#each month.weeks as weekDates (weekDates)}
-                <RangeCalendar.GridRow class="mt-2 w-full">
+                <RangeCalendar.GridRow class="sh-calendar__row--body">
                   {#each weekDates as date (date)}
                     <RangeCalendar.Cell {date} month={month.value}>
                       {#if day}

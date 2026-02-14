@@ -49,10 +49,7 @@ get along, so we shut typescript up by casting `value` to `never`.
   bind:placeholder
   {weekdayFormat}
   {disableDaysOutsideMonth}
-  class={cn(
-    'bg-background group/calendar p-3 [--cell-size:--spacing(8)] [[data-slot=card-content]_&]:bg-transparent [[data-slot=popover-content]_&]:bg-transparent',
-    className
-  )}
+  class={cn('sh-calendar', className)}
   {locale}
   {monthFormat}
   {yearFormat}
@@ -81,7 +78,7 @@ get along, so we shut typescript up by casting `value` to `never`.
           </Calendar.Header>
           <Calendar.Grid>
             <Calendar.GridHead>
-              <Calendar.GridRow class="select-none">
+              <Calendar.GridRow class="sh-calendar__row--head">
                 {#each weekdays as weekday (weekday)}
                   <Calendar.HeadCell>
                     {weekday.slice(0, 2)}
@@ -91,7 +88,7 @@ get along, so we shut typescript up by casting `value` to `never`.
             </Calendar.GridHead>
             <Calendar.GridBody>
               {#each month.weeks as weekDates (weekDates)}
-                <Calendar.GridRow class="mt-2 w-full">
+                <Calendar.GridRow class="sh-calendar__row--body">
                   {#each weekDates as date (date)}
                     <Calendar.Cell {date} month={month.value}>
                       {#if day}

@@ -1,0 +1,37 @@
+.sh-card {
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  color: var(--card-foreground);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.sh-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  padding: 1.5rem;
+}
+
+.sh-card__title {
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+}
+
+.sh-card__description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.sh-card__content {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+.sh-card__footer {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  padding-top: 0;
+}

@@ -1,0 +1,218 @@
+@keyframes navigation-menu-enter-from-right {
+  from {
+    transform: translateX(13rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes navigation-menu-enter-from-left {
+  from {
+    transform: translateX(-13rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes navigation-menu-exit-to-right {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(13rem);
+    opacity: 0;
+  }
+}
+
+@keyframes navigation-menu-exit-to-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-13rem);
+    opacity: 0;
+  }
+}
+
+@keyframes navigation-menu-scale-in {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes navigation-menu-scale-out {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+}
+
+@keyframes navigation-menu-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navigation-menu-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.sh-navigation-menu__list {
+  display: flex;
+  flex: 1;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.sh-navigation-menu__trigger {
+  display: inline-flex;
+  height: 2.5rem;
+  width: max-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background-color: var(--background);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition:
+    background-color 0.15s ease-in-out,
+    color 0.15s ease-in-out;
+}
+
+.sh-navigation-menu__trigger:hover,
+.sh-navigation-menu__trigger:focus {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+  outline: none;
+}
+
+.sh-navigation-menu__trigger[disabled] {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.sh-navigation-menu__trigger[data-active],
+.sh-navigation-menu__trigger[data-state='open'] {
+  background-color: color-mix(in srgb, var(--accent) 50%, transparent);
+}
+
+.sh-navigation-menu__content {
+  left: 0;
+  top: 0;
+  width: 100%;
+  animation-duration: 0.15s;
+  animation-timing-function: ease;
+}
+
+@media (min-width: 768px) {
+  .sh-navigation-menu__content {
+    position: absolute;
+    width: auto;
+  }
+}
+
+.sh-navigation-menu__content[data-motion^='from-'] {
+  animation-name: navigation-menu-fade-in;
+}
+
+.sh-navigation-menu__content[data-motion^='to-'] {
+  animation-name: navigation-menu-fade-out;
+}
+
+.sh-navigation-menu__content[data-motion='from-end'] {
+  animation-name: navigation-menu-enter-from-right;
+}
+
+.sh-navigation-menu__content[data-motion='from-start'] {
+  animation-name: navigation-menu-enter-from-left;
+}
+
+.sh-navigation-menu__content[data-motion='to-end'] {
+  animation-name: navigation-menu-exit-to-right;
+}
+
+.sh-navigation-menu__content[data-motion='to-start'] {
+  animation-name: navigation-menu-exit-to-left;
+}
+
+.sh-navigation-menu__viewport {
+  position: relative;
+  margin-top: 0.375rem;
+  height: var(--bits-navigation-menu-viewport-height);
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform-origin: top center;
+  transition:
+    width 0.15s ease,
+    height 0.15s ease;
+}
+
+@media (min-width: 768px) {
+  .sh-navigation-menu__viewport {
+    width: var(--bits-navigation-menu-viewport-width);
+  }
+}
+
+.sh-navigation-menu__viewport[data-state='open'] {
+  animation: navigation-menu-scale-in 0.15s ease;
+}
+
+.sh-navigation-menu__viewport[data-state='closed'] {
+  animation: navigation-menu-scale-out 0.15s ease;
+}
+
+.sh-navigation-menu__indicator {
+  top: 100%;
+  z-index: 1;
+  display: flex;
+  height: 0.375rem;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  transition:
+    width 0.15s ease,
+    transform 0.15s ease;
+}
+
+.sh-navigation-menu__indicator[data-state='visible'] {
+  animation: navigation-menu-fade-in 0.15s ease;
+}
+
+.sh-navigation-menu__indicator[data-state='hidden'] {
+  animation: navigation-menu-fade-out 0.15s ease;
+}

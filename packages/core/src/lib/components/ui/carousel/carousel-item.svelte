@@ -18,11 +18,8 @@
   data-slot="carousel-item"
   role="group"
   aria-roledescription="slide"
-  class={cn(
-    'min-w-0 shrink-0 grow-0 basis-full',
-    emblaCtx.orientation === 'horizontal' ? 'ps-4' : 'pt-4',
-    className
-  )}
+  class={cn('sh-carousel__item', className)}
+  data-orientation={emblaCtx.orientation}
   data-embla-slide=""
   {...restProps}
 >

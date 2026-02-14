@@ -1,0 +1,14 @@
+.sh-separator {
+  background-color: var(--border);
+  flex-shrink: 0;
+}
+
+.sh-separator[data-orientation='horizontal'] {
+  height: 1px;
+  width: 100%;
+}
+
+.sh-separator[data-orientation='vertical'] {
+  height: 100%;
+  width: 1px;
+}

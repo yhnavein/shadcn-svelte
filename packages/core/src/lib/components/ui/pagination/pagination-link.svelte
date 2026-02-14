@@ -1,10 +1,7 @@
 <script lang="ts">
   import { Pagination as PaginationPrimitive } from 'bits-ui';
   import { cn } from '$lib/utils.js';
-  import {
-    type Props,
-    buttonVariants,
-  } from '$lib/components/ui/button/index.js';
+  import { type Props, buttonVariants } from '$lib/components/ui/button/index.js';
 
   let {
     ref = $bindable(null),
@@ -31,6 +28,7 @@
   data-slot="pagination-link"
   data-active={isActive}
   class={cn(
+    'sh-pagination__link',
     buttonVariants({
       variant: isActive ? 'outline' : 'ghost',
       size,

@@ -18,12 +18,12 @@
     buttonVariants({
       size: 'default',
       variant: 'ghost',
-      class: 'gap-1 px-2.5 sm:pe-2.5',
+      class: 'sh-pagination__next',
     }),
     className
   )}
   {...restProps}
 >
-  <span class="hidden sm:block">Next</span>
+  <span class="sh-pagination__label">Next</span>
   <ChevronRightIcon /></PaginationPrimitive.NextButton
 >

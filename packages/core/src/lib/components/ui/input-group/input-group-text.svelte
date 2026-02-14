@@ -6,16 +6,16 @@
     ref = $bindable(null),
     class: className,
     children,
+    placement = 'left',
     ...restProps
-  }: WithElementRef<HTMLAttributes<HTMLSpanElement>> = $props();
+  }: WithElementRef<HTMLAttributes<HTMLSpanElement>> & { placement?: 'left' | 'right' } = $props();
 </script>
 
 <span
   bind:this={ref}
-  class={cn(
-    "text-muted-foreground flex items-center gap-2 text-sm [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4",
-    className
-  )}
+  data-slot="input-group-text"
+  data-placement={placement}
+  class={cn('sh-input-group__text', className)}
   {...restProps}
 >
   {@render children?.()}

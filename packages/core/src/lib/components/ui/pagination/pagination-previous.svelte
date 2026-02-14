@@ -18,12 +18,12 @@
     buttonVariants({
       size: 'default',
       variant: 'ghost',
-      class: 'gap-1 px-2.5 sm:ps-2.5',
+      class: 'sh-pagination__previous',
     }),
     className
   )}
   {...restProps}
 >
   <ChevronLeftIcon />
-  <span class="hidden sm:block">Previous</span></PaginationPrimitive.PrevButton
+  <span class="sh-pagination__label">Previous</span></PaginationPrimitive.PrevButton
 >

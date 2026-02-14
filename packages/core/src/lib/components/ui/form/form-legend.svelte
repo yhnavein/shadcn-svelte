@@ -9,11 +9,4 @@
   }: WithoutChild<FormPrimitive.LegendProps> = $props();
 </script>
 
-<FormPrimitive.Legend
-  bind:ref
-  class={cn(
-    'data-[fs-error]:text-destructive text-sm leading-none font-medium',
-    className
-  )}
-  {...restProps}
-/>
+<FormPrimitive.Legend bind:ref class={cn('sh-form__legend', className)} {...restProps} />

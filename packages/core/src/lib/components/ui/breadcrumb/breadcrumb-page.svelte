@@ -16,7 +16,7 @@
   role="link"
   aria-disabled="true"
   aria-current="page"
-  class={cn('text-foreground font-normal', className)}
+  class={cn('sh-breadcrumb__page', className)}
   {...restProps}
 >
   {@render children?.()}

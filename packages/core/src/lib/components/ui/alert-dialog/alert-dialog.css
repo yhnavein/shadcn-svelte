@@ -1,0 +1,125 @@
+@keyframes sh-alert-dialog-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes sh-alert-dialog-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes sh-alert-dialog-zoom-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes sh-alert-dialog-zoom-out {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.95);
+  }
+}
+
+.sh-alert-dialog__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+.sh-alert-dialog__overlay[data-state='open'] {
+  animation: sh-alert-dialog-fade-in 150ms ease-out;
+}
+
+.sh-alert-dialog__overlay[data-state='closed'] {
+  animation: sh-alert-dialog-fade-out 150ms ease-in;
+}
+
+.sh-alert-dialog__content {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 50;
+  display: grid;
+  width: 100%;
+  max-width: calc(100% - 2rem);
+  transform: translate(-50%, -50%);
+  gap: 1rem;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  padding: 1.5rem;
+  box-shadow:
+    0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -2px rgb(0 0 0 / 0.05);
+  border-radius: var(--radius-lg, 0.5rem);
+  transition-duration: 200ms;
+}
+
+@media (min-width: 640px) {
+  .sh-alert-dialog__content {
+    max-width: 32rem;
+  }
+}
+
+.sh-alert-dialog__content[data-state='open'] {
+  animation: sh-alert-dialog-zoom-in 200ms ease-out;
+}
+
+.sh-alert-dialog__content[data-state='closed'] {
+  animation: sh-alert-dialog-zoom-out 200ms ease-in;
+}
+
+.sh-alert-dialog__header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .sh-alert-dialog__header {
+    text-align: left;
+  }
+}
+
+.sh-alert-dialog__footer {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .sh-alert-dialog__footer {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.sh-alert-dialog__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.sh-alert-dialog__description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}

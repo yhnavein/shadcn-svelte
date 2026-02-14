@@ -1,21 +1,14 @@
 <script lang="ts">
   import { RangeCalendar as RangeCalendarPrimitive } from 'bits-ui';
   import ChevronLeftIcon from '@lucide/svelte/icons/chevron-left';
-  import {
-    buttonVariants,
-    type ButtonVariant,
-  } from '$lib/components/ui/button/index.js';
   import { cn } from '$lib/utils.js';
 
   let {
     ref = $bindable(null),
     class: className,
     children,
-    variant = 'ghost',
     ...restProps
-  }: RangeCalendarPrimitive.PrevButtonProps & {
-    variant?: ButtonVariant;
-  } = $props();
+  }: RangeCalendarPrimitive.PrevButtonProps = $props();
 </script>
 
 {#snippet Fallback()}
@@ -24,11 +17,7 @@
 
 <RangeCalendarPrimitive.PrevButton
   bind:ref
-  class={cn(
-    buttonVariants({ variant }),
-    'size-(--cell-size) bg-transparent p-0 select-none disabled:opacity-50 rtl:rotate-180',
-    className
-  )}
+  class={cn('sh-calendar__nav-button', className)}
   children={children || Fallback}
   {...restProps}
 />

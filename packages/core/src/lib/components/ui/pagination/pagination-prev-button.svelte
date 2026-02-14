@@ -13,7 +13,7 @@
 </script>
 
 {#snippet Fallback()}
-  <ChevronLeftIcon class="size-4" />
+  <ChevronLeftIcon />
   <span>Previous</span>
 {/snippet}
 
@@ -24,7 +24,7 @@
     buttonVariants({
       size: 'default',
       variant: 'ghost',
-      class: 'gap-1 px-2.5 sm:ps-2.5',
+      class: 'sh-pagination__previous',
     }),
     className
   )}

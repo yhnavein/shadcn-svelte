@@ -9,8 +9,4 @@
   }: RangeCalendarPrimitive.GridRowProps = $props();
 </script>
 
-<RangeCalendarPrimitive.GridRow
-  bind:ref
-  class={cn('flex', className)}
-  {...restProps}
-/>
+<RangeCalendarPrimitive.GridRow bind:ref class={cn('sh-calendar__row', className)} {...restProps} />

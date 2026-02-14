@@ -1,6 +1,5 @@
 <script lang="ts">
   import { Accordion as AccordionPrimitive } from 'bits-ui';
-  import { cn } from '$lib/utils.js';
 
   let {
     ref = $bindable(null),
@@ -12,6 +11,6 @@
 <AccordionPrimitive.Item
   bind:ref
   data-slot="accordion-item"
-  class={cn('border-b last:border-b-0', className)}
+  class="sh-accordion__item {className || ''}"
   {...restProps}
 />

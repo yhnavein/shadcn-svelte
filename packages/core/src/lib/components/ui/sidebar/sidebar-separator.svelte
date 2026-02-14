@@ -14,6 +14,6 @@
   bind:ref
   data-slot="sidebar-separator"
   data-sidebar="separator"
-  class={cn('bg-sidebar-border', className)}
+  class={cn('sh-sidebar-separator', className)}
   {...restProps}
 />

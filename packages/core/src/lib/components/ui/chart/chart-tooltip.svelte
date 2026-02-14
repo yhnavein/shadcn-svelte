@@ -1,11 +1,7 @@
 <script lang="ts">
   import { cn, type WithElementRef, type WithoutChildren } from '$lib/utils.js';
   import type { HTMLAttributes } from 'svelte/elements';
-  import {
-    getPayloadConfigFromPayload,
-    useChart,
-    type TooltipPayload,
-  } from './chart-utils.js';
+  import { getPayloadConfigFromPayload, useChart, type TooltipPayload } from './chart-utils.js';
   import { getTooltipContext, Tooltip as TooltipPrimitive } from 'layerchart';
   import type { Snippet } from 'svelte';
 
@@ -37,8 +33,7 @@
     hideIndicator?: boolean;
     labelClassName?: string;
     labelFormatter?: // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      | ((value: any, payload: TooltipPayload[]) => string | number | Snippet)
-      | null;
+      ((value: any, payload: TooltipPayload[]) => string | number | Snippet) | null;
     formatter?: Snippet<
       [
         {
@@ -73,14 +68,12 @@
     return labelFormatter(value, tooltipCtx.payload);
   });
 
-  const nestLabel = $derived(
-    tooltipCtx.payload.length === 1 && indicator !== 'dot'
-  );
+  const nestLabel = $derived(tooltipCtx.payload.length === 1 && indicator !== 'dot');
 </script>
 
 {#snippet TooltipLabel()}
   {#if formattedLabel}
-    <div class={cn('font-medium', labelClassName)}>
+    <div class={cn('sh-chart__tooltip-label', labelClassName)}>
       {#if typeof formattedLabel === 'function'}
         {@render formattedLabel()}
       {:else}
@@ -91,30 +84,17 @@
 {/snippet}
 
 <TooltipPrimitive.Root variant="none">
-  <div
-    class={cn(
-      'border-border/50 bg-background grid min-w-[9rem] items-start gap-1.5 rounded-lg border px-2.5 py-1.5 text-xs shadow-xl',
-      className
-    )}
-    {...restProps}
-  >
+  <div class={cn('sh-chart__tooltip', className)} {...restProps}>
     {#if !nestLabel}
       {@render TooltipLabel()}
     {/if}
-    <div class="grid gap-1.5">
+    <div class="sh-chart__tooltip-items">
       {#each tooltipCtx.payload as item, i (item.key + i)}
         {@const key = `${nameKey || item.key || item.name || 'value'}`}
-        {@const itemConfig = getPayloadConfigFromPayload(
-          chart.config,
-          item,
-          key
-        )}
+        {@const itemConfig = getPayloadConfigFromPayload(chart.config, item, key)}
         {@const indicatorColor = color || item.payload?.color || item.color}
         <div
-          class={cn(
-            '[&>svg]:text-muted-foreground flex w-full flex-wrap items-stretch gap-2 [&>svg]:size-2.5',
-            indicator === 'dot' && 'items-center'
-          )}
+          class={cn('sh-chart__tooltip-item', indicator === 'dot' && 'sh-chart__tooltip-item--dot')}
         >
           {#if formatter && item.value !== undefined && item.name}
             {@render formatter({
@@ -130,36 +110,32 @@
             {:else if !hideIndicator}
               <div
                 style="--color-bg: {indicatorColor}; --color-border: {indicatorColor};"
-                class={cn(
-                  'shrink-0 rounded-[2px] border-(--color-border) bg-(--color-bg)',
-                  {
-                    'size-2.5': indicator === 'dot',
-                    'h-full w-1': indicator === 'line',
-                    'w-0 border-[1.5px] border-dashed bg-transparent':
-                      indicator === 'dashed',
-                    'my-0.5': nestLabel && indicator === 'dashed',
-                  }
-                )}
+                class={cn('sh-chart__tooltip-indicator', {
+                  'sh-chart__tooltip-indicator--dot': indicator === 'dot',
+                  'sh-chart__tooltip-indicator--line': indicator === 'line',
+                  'sh-chart__tooltip-indicator--dashed': indicator === 'dashed',
+                  'sh-chart__tooltip-indicator--dashed-nested': nestLabel && indicator === 'dashed',
+                })}
               ></div>
             {/if}
             <div
               class={cn(
-                'flex flex-1 shrink-0 justify-between leading-none',
-                nestLabel ? 'items-end' : 'items-center'
+                'sh-chart__tooltip-content',
+                nestLabel
+                  ? 'sh-chart__tooltip-content--nested'
+                  : 'sh-chart__tooltip-content--center'
               )}
             >
-              <div class="grid gap-1.5">
+              <div class="sh-chart__tooltip-name-container">
                 {#if nestLabel}
                   {@render TooltipLabel()}
                 {/if}
-                <span class="text-muted-foreground">
+                <span class="sh-chart__tooltip-name">
                   {itemConfig?.label || item.name}
                 </span>
               </div>
               {#if item.value !== undefined}
-                <span
-                  class="text-foreground font-mono font-medium tabular-nums"
-                >
+                <span class="sh-chart__tooltip-value">
                   {item.value.toLocaleString()}
                 </span>
               {/if}

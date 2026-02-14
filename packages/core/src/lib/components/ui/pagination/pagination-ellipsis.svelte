@@ -7,18 +7,16 @@
     ref = $bindable(null),
     class: className,
     ...restProps
-  }: WithoutChildren<
-    WithElementRef<HTMLAttributes<HTMLSpanElement>>
-  > = $props();
+  }: WithoutChildren<WithElementRef<HTMLAttributes<HTMLSpanElement>>> = $props();
 </script>
 
 <span
   bind:this={ref}
   aria-hidden="true"
   data-slot="pagination-ellipsis"
-  class={cn('flex size-9 items-center justify-center', className)}
+  class={cn('sh-pagination__ellipsis', className)}
   {...restProps}
 >
-  <EllipsisIcon class="size-4" />
-  <span class="sr-only">More pages</span>
+  <EllipsisIcon />
+  <span class="sh-pagination__sr-only">More pages</span>
 </span>

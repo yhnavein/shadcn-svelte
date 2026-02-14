@@ -14,7 +14,7 @@
   bind:this={ref}
   data-slot="sidebar-group-content"
   data-sidebar="group-content"
-  class={cn('w-full text-sm', className)}
+  class={cn('sh-sidebar-group-content', className)}
   {...restProps}
 >
   {@render children?.()}

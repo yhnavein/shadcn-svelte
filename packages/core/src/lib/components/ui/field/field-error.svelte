@@ -30,9 +30,7 @@
   });
 
   const isMultipleErrors = $derived(errors && errors.length > 1);
-  const singleErrorMessage = $derived(
-    errors && errors.length === 1 && errors[0]?.message
-  );
+  const singleErrorMessage = $derived(errors && errors.length === 1 && errors[0]?.message);
 </script>
 
 {#if hasContent}
@@ -40,7 +38,7 @@
     bind:this={ref}
     role="alert"
     data-slot="field-error"
-    class={cn('text-destructive text-sm font-normal', className)}
+    class={cn('sh-field__error', className)}
     {...restProps}
   >
     {#if children}
