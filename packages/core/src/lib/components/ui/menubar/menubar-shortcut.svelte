@@ -18,3 +18,12 @@
 >
   {@render children?.()}
 </span>
+
+<style>
+  :global(.sh-menubar__shortcut) {
+    margin-inline-start: auto;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--muted-foreground);
+  }
+</style>

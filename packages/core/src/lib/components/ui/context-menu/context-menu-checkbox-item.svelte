@@ -33,3 +33,46 @@
     {@render childrenProp?.()}
   {/snippet}
 </ContextMenuPrimitive.CheckboxItem>
+
+<style>
+  :global(.sh-context-menu__checkbox-item) {
+    position: relative;
+    display: flex;
+    cursor: default;
+    user-select: none;
+    align-items: center;
+    border-radius: var(--radius-sm);
+    padding: 0.375rem 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    outline: none;
+    gap: 0.5rem;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+    padding-left: 2rem;
+    padding-right: 0.5rem;
+  }
+
+  :global(.sh-context-menu__checkbox-item:focus),
+  :global(.sh-context-menu__checkbox-item[data-highlighted]) {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  :global(.sh-context-menu__checkbox-item[data-disabled]) {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  /* Icons styling */
+  :global(.sh-context-menu__checkbox-item svg) {
+    pointer-events: none;
+    flex-shrink: 0;
+  }
+
+  :global(.sh-context-menu__checkbox-item svg:not([class*='size-'])) {
+    width: 1rem;
+    height: 1rem;
+  }
+</style>

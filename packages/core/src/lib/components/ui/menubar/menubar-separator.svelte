@@ -15,3 +15,11 @@
   class={cn('sh-menubar__separator', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-menubar__separator) {
+    margin: 0.25rem -0.25rem;
+    height: 1px;
+    background-color: var(--border);
+  }
+</style>
