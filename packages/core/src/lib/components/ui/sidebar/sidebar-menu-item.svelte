@@ -19,3 +19,10 @@
 >
   {@render children?.()}
 </li>
+
+<style>
+  /* Sidebar Menu Item */
+  .sh-sidebar-menu-item {
+    position: relative;
+  }
+</style>

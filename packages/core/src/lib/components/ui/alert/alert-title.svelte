@@ -18,3 +18,12 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-alert__title {
+    margin-bottom: 0.25rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+</style>

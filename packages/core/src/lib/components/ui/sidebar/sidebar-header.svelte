@@ -19,3 +19,13 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  /* Sidebar Header */
+  .sh-sidebar-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* gap-2 */
+    padding: 0.5rem; /* p-2 */
+  }
+</style>

@@ -15,3 +15,15 @@
   class={cn('sh-avatar__fallback', className)}
   {...restProps}
 />
+
+<style>
+  .sh-avatar__fallback {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+    background-color: var(--muted);
+  }
+</style>

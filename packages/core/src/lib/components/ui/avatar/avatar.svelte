@@ -17,3 +17,15 @@
   class={cn('sh-avatar', className)}
   {...restProps}
 />
+
+<style>
+  .sh-avatar {
+    position: relative;
+    display: flex;
+    height: 2rem;
+    width: 2rem;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 9999px;
+  }
+</style>

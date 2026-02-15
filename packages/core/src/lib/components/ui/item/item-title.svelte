@@ -13,3 +13,11 @@
 <div bind:this={ref} data-slot="item-title" class={cn('sh-item__title', className)} {...restProps}>
   {@render children?.()}
 </div>
+
+<style>
+  .sh-item__title {
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+</style>

@@ -15,3 +15,14 @@
   class={cn('sh-navigation-menu__list', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-navigation-menu__list) {
+    display: flex;
+    flex: 1;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+</style>

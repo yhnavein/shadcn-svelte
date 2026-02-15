@@ -20,14 +20,9 @@
 <PaginationPrimitive.NextButton
   bind:ref
   aria-label="Go to next page"
-  class={cn(
-    buttonVariants({
-      size: 'default',
-      variant: 'ghost',
-      class: 'sh-pagination__next',
-    }),
-    className
-  )}
+  class={cn('sh-pagination__next', buttonVariants(), className)}
+  data-variant="ghost"
+  data-size="default"
   children={children || Fallback}
   {...restProps}
 />

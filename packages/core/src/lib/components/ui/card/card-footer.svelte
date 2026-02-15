@@ -18,3 +18,12 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-card__footer {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    padding-top: 0;
+  }
+</style>

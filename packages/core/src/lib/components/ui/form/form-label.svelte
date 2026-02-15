@@ -18,3 +18,9 @@
     </Label>
   {/snippet}
 </FormPrimitive.Label>
+
+<style>
+  :global(.sh-form__label[data-fs-error]) {
+    color: var(--destructive);
+  }
+</style>

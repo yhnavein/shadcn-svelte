@@ -18,3 +18,14 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-alert__description {
+    font-size: 0.875rem;
+    line-height: 1.625; /* relaxed */
+  }
+
+  .sh-alert__description :global(p) {
+    line-height: 1.625;
+  }
+</style>

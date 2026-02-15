@@ -15,3 +15,16 @@
   class={cn('sh-tabs__content', className)}
   {...restProps}
 />
+
+<style>
+  .sh-tabs__content {
+    margin-top: 0.5rem;
+  }
+
+  .sh-tabs__content:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 2px var(--background),
+      0 0 0 4px var(--ring);
+  }
+</style>

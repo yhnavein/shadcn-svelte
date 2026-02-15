@@ -38,3 +38,22 @@
     {@render children?.()}
   </div>
 </div>
+
+<style>
+  .sh-carousel__viewport {
+    overflow: hidden;
+  }
+
+  .sh-carousel__content {
+    display: flex;
+  }
+
+  .sh-carousel__content[data-orientation='horizontal'] {
+    margin-inline-start: -1rem;
+  }
+
+  .sh-carousel__content[data-orientation='vertical'] {
+    flex-direction: column;
+    margin-top: -1rem;
+  }
+</style>

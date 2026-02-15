@@ -19,3 +19,12 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-input-group {
+    position: relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+</style>

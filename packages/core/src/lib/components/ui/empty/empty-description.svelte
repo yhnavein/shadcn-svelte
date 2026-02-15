@@ -18,3 +18,12 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-empty__description {
+    margin-top: 0.5rem;
+    max-width: 24rem;
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+  }
+</style>

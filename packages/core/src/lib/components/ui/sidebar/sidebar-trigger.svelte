@@ -33,3 +33,11 @@
   <PanelLeftIcon />
   <span class="sr-only">Toggle Sidebar</span>
 </Button>
+
+<style>
+  /* Sidebar Trigger */
+  :global(.sh-sidebar-trigger) {
+    width: 1.75rem; /* size-7 */
+    height: 1.75rem;
+  }
+</style>

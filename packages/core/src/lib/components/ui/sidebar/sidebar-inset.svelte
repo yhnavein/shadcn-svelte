@@ -18,3 +18,31 @@
 >
   {@render children?.()}
 </main>
+
+<style>
+  /* Sidebar Inset */
+  .sh-sidebar-inset {
+    background-color: var(--background);
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  @media (min-width: 768px) {
+    :global(.sh-sidebar-provider:has([data-variant='inset'])) .sh-sidebar-inset {
+      margin: 0.5rem; /* m-2 */
+      margin-inline-start: 0;
+      border-radius: var(--radius-xl);
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    }
+
+    :global(
+        .sh-sidebar-provider:has([data-variant='inset']) .sh-sidebar-wrapper[data-state='collapsed']
+      )
+      ~ .sh-sidebar-inset {
+      margin-inline-start: 0.5rem; /* ms-2 */
+    }
+  }
+</style>

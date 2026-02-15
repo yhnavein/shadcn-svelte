@@ -18,3 +18,18 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  :global(.sh-dialog__header) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem; /* space-y-1.5 = 6px */
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    :global(.sh-dialog__header) {
+      text-align: left;
+    }
+  }
+</style>

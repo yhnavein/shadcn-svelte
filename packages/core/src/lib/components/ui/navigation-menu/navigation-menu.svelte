@@ -18,10 +18,7 @@
   bind:ref
   data-slot="navigation-menu"
   data-viewport={viewport}
-  class={cn(
-    'group/navigation-menu relative flex max-w-max flex-1 items-center justify-center',
-    className
-  )}
+  class={cn('sh-navigation-menu', className)}
   {...restProps}
 >
   {@render children?.()}
@@ -30,3 +27,14 @@
     <NavigationMenuViewport />
   {/if}
 </NavigationMenuPrimitive.Root>
+
+<style>
+  :global(.sh-navigation-menu) {
+    position: relative;
+    display: flex;
+    max-width: max-content;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

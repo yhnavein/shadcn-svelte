@@ -17,3 +17,10 @@
   class={cn('sh-radio-group', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-radio-group) {
+    display: grid;
+    gap: 0.5rem;
+  }
+</style>

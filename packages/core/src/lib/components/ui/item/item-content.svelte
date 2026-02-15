@@ -18,3 +18,12 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-item__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+</style>

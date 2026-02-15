@@ -34,3 +34,27 @@
   />
   {@render children?.()}
 </div>
+
+<style>
+  /* Sidebar Menu Skeleton */
+  .sh-sidebar-menu-skeleton {
+    display: flex;
+    height: 2rem; /* h-8 */
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+    border-radius: var(--radius-md);
+    padding-inline: 0.5rem; /* px-2 */
+  }
+
+  :global(.sh-sidebar-menu-skeleton-icon) {
+    width: 1rem;
+    height: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  :global(.sh-sidebar-menu-skeleton-text) {
+    height: 1rem;
+    max-width: var(--skeleton-width);
+    flex: 1;
+  }
+</style>

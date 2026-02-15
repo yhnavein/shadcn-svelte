@@ -18,3 +18,12 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-card__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    padding: 1.5rem;
+  }
+</style>

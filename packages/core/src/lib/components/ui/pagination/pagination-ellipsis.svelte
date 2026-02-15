@@ -20,3 +20,30 @@
   <EllipsisIcon />
   <span class="sh-pagination__sr-only">More pages</span>
 </span>
+
+<style>
+  :global(.sh-pagination__ellipsis) {
+    display: flex;
+    height: 2.25rem;
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.sh-pagination__ellipsis svg) {
+    height: 1rem;
+    width: 1rem;
+  }
+
+  .sh-pagination__sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+</style>

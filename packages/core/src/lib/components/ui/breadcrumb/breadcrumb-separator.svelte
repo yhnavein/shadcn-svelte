@@ -25,3 +25,10 @@
     <ChevronRightIcon />
   {/if}
 </li>
+
+<style>
+  .sh-breadcrumb__separator :global(> svg) {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+</style>

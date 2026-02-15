@@ -27,14 +27,9 @@
   aria-current={isActive ? 'page' : undefined}
   data-slot="pagination-link"
   data-active={isActive}
-  class={cn(
-    'sh-pagination__link',
-    buttonVariants({
-      variant: isActive ? 'outline' : 'ghost',
-      size,
-    }),
-    className
-  )}
+  class={cn('sh-pagination__link', buttonVariants(), className)}
+  data-variant={isActive ? 'outline' : 'ghost'}
+  data-size={size}
   children={children || Fallback}
   {...restProps}
 />

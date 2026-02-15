@@ -18,3 +18,10 @@
 >
   {@render children?.()}
 </p>
+
+<style>
+  .sh-item__description {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+  }
+</style>

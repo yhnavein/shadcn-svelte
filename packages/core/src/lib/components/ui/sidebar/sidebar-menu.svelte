@@ -19,3 +19,17 @@
 >
   {@render children?.()}
 </ul>
+
+<style>
+  /* Sidebar Menu */
+  .sh-sidebar-menu {
+    display: flex;
+    width: 100%;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.25rem; /* gap-1 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+</style>

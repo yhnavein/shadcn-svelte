@@ -19,3 +19,19 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  /* Sidebar Content */
+  .sh-sidebar-content {
+    display: flex;
+    min-height: 0;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.5rem; /* gap-2 */
+    overflow: auto;
+  }
+
+  :global(.sh-sidebar-wrapper[data-collapsible='icon']) .sh-sidebar-content {
+    overflow: hidden;
+  }
+</style>

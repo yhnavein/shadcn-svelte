@@ -32,3 +32,11 @@
     </div>
   {/snippet}
 </FormPrimitive.Field>
+
+<style>
+  .sh-form__item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+</style>

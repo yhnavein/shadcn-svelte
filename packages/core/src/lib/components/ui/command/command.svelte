@@ -23,3 +23,16 @@
   class={cn('sh-command', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-command) {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    background-color: var(--popover);
+    color: var(--popover-foreground);
+  }
+</style>

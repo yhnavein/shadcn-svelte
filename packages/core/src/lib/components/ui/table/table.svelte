@@ -15,3 +15,12 @@
     {@render children?.()}
   </table>
 </div>
+
+<style>
+  .sh-table {
+    width: 100%;
+    caption-side: bottom;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+</style>

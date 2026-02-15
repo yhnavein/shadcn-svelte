@@ -15,3 +15,12 @@
   class={cn('sh-command__separator', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-command__separator) {
+    margin-left: -0.25rem; /* -mx-1 */
+    margin-right: -0.25rem;
+    height: 1px;
+    background-color: var(--border);
+  }
+</style>

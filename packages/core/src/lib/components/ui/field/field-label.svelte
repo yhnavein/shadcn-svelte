@@ -14,3 +14,11 @@
 <Label bind:ref data-slot="field-label" class={cn('sh-field__label', className)} {...restProps}>
   {@render children?.()}
 </Label>
+
+<style>
+  :global(.sh-field__label) {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1;
+  }
+</style>

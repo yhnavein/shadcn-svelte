@@ -19,3 +19,16 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .sh-field:has(:disabled) :global(.sh-field__label) {
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+</style>

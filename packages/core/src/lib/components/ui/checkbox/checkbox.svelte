@@ -31,3 +31,61 @@
     </div>
   {/snippet}
 </CheckboxPrimitive.Root>
+
+<style>
+  :global(.sh-checkbox) {
+    display: flex;
+    height: 1rem;
+    width: 1rem;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid var(--input);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    transition: box-shadow 0.15s ease-in-out;
+    outline: none;
+  }
+
+  :global(.dark .sh-checkbox) {
+    background-color: color-mix(in oklch, var(--input), transparent 70%);
+  }
+
+  :global(.sh-checkbox:focus-visible) {
+    border-color: var(--ring);
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring), transparent 50%);
+  }
+
+  :global(.sh-checkbox[data-state='checked']) {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  :global(.sh-checkbox[aria-invalid='true']) {
+    border-color: var(--destructive);
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--destructive), transparent 80%);
+  }
+
+  :global(.dark .sh-checkbox[aria-invalid='true']) {
+    box-shadow: 0 0 0 3px color-mix(in oklch, var(--destructive), transparent 60%);
+  }
+
+  :global(.sh-checkbox:disabled) {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  .sh-checkbox-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: currentColor;
+    transition: none;
+  }
+
+  .sh-checkbox-indicator :global(svg) {
+    height: 0.875rem;
+    width: 0.875rem;
+  }
+</style>

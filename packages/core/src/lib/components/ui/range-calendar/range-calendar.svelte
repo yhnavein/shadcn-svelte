@@ -54,8 +54,8 @@
   {#snippet children({ months, weekdays })}
     <RangeCalendar.Months>
       <RangeCalendar.Nav>
-        <RangeCalendar.PrevButton variant={buttonVariant} />
-        <RangeCalendar.NextButton variant={buttonVariant} />
+        <RangeCalendar.PrevButton />
+        <RangeCalendar.NextButton />
       </RangeCalendar.Nav>
       {#each months as month, monthIndex (month)}
         <RangeCalendar.Month>
@@ -107,3 +107,17 @@
     </RangeCalendar.Months>
   {/snippet}
 </RangeCalendarPrimitive.Root>
+
+<style>
+  :global(.sh-calendar) {
+    background-color: var(--background);
+    padding: 0.75rem;
+    --cell-size: 2rem;
+    display: inline-block;
+  }
+
+  :global([data-slot='card-content'] .sh-calendar),
+  :global([data-slot='popover-content'] .sh-calendar) {
+    background-color: transparent;
+  }
+</style>

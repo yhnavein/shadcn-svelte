@@ -4,6 +4,7 @@
   let {
     ref = $bindable(null),
     open = $bindable(false),
+    class: className,
     ...restProps
   }: CollapsiblePrimitive.RootProps = $props();
 </script>
@@ -12,5 +13,11 @@
   bind:ref
   bind:open
   data-slot="collapsible"
+  class="sh-collapsible {className || ''}"
   {...restProps}
 />
+
+<style>
+  .sh-collapsible {
+  }
+</style>

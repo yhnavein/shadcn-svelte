@@ -19,3 +19,11 @@
   class={cn('sh-form__item', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-form__item) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+</style>

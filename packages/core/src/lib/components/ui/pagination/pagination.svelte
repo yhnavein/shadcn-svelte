@@ -26,3 +26,13 @@
   {siblingCount}
   {...restProps}
 />
+
+<style>
+  :global(.sh-pagination) {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+</style>

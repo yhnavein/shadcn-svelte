@@ -21,3 +21,10 @@
 >
   {@render children?.()}
 </span>
+
+<style>
+  .sh-breadcrumb__page {
+    font-weight: 400;
+    color: var(--foreground);
+  }
+</style>

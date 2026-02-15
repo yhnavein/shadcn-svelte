@@ -16,3 +16,20 @@
   class={cn('sh-separator', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-separator) {
+    background-color: var(--border);
+    flex-shrink: 0;
+  }
+
+  :global(.sh-separator[data-orientation='horizontal']) {
+    height: 1px;
+    width: 100%;
+  }
+
+  :global(.sh-separator[data-orientation='vertical']) {
+    height: 100%;
+    width: 1px;
+  }
+</style>

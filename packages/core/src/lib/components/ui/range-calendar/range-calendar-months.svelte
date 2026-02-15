@@ -13,3 +13,18 @@
 <div bind:this={ref} class={cn('sh-calendar__months', className)} {...restProps}>
   {@render children?.()}
 </div>
+
+<style>
+  .sh-calendar__months {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .sh-calendar__months {
+      flex-direction: row;
+    }
+  }
+</style>

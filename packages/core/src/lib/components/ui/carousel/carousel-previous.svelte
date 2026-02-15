@@ -32,3 +32,24 @@
   <ArrowLeftIcon class="size-4" />
   <span class="sr-only">Previous slide</span>
 </Button>
+
+<style>
+  :global(.sh-carousel__nav) {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 9999px;
+  }
+
+  :global(.sh-carousel__nav[data-variant='prev'][data-orientation='horizontal']) {
+    inset-inline-start: -3rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  :global(.sh-carousel__nav[data-variant='prev'][data-orientation='vertical']) {
+    inset-inline-start: 50%;
+    top: -3rem;
+    transform: translateX(-50%) rotate(90deg);
+  }
+</style>

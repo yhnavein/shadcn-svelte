@@ -15,3 +15,11 @@
   class={cn('sh-command__list', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-command__list) {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+</style>

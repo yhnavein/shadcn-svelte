@@ -18,3 +18,15 @@
   class={cn('sh-resizable__pane-group', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-resizable__pane-group) {
+    display: flex;
+    height: 100%;
+    width: 100%;
+  }
+
+  :global(.sh-resizable__pane-group[data-direction='vertical']) {
+    flex-direction: column;
+  }
+</style>

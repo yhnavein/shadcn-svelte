@@ -15,3 +15,11 @@
   class={cn('sh-sheet__title', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-sheet__title) {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--foreground);
+  }
+</style>

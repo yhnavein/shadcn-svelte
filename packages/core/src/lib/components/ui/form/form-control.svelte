@@ -17,3 +17,9 @@
     </div>
   {/snippet}
 </FormPrimitive.Control>
+
+<style>
+  /* .sh-form__control is primarily for future extensibility or override */
+  .sh-form__control {
+  }
+</style>

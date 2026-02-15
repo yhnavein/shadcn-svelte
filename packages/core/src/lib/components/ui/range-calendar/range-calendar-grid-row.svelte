@@ -10,3 +10,18 @@
 </script>
 
 <RangeCalendarPrimitive.GridRow bind:ref class={cn('sh-calendar__row', className)} {...restProps} />
+
+<style>
+  :global(.sh-calendar__row) {
+    display: flex;
+  }
+
+  :global(.sh-calendar__row--head) {
+    user-select: none;
+  }
+
+  :global(.sh-calendar__row--body) {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+</style>

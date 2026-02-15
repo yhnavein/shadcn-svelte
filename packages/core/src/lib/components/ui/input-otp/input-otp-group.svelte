@@ -18,3 +18,10 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-input-otp__group {
+    display: flex;
+    align-items: center;
+  }
+</style>

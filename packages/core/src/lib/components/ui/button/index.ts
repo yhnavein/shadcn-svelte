@@ -2,12 +2,10 @@ import Root from './button.svelte';
 import { type ButtonProps, type ButtonSize, type ButtonVariant } from './button.svelte';
 
 function buttonVariants({ variant = 'default', size = 'default', className = '' } = {}) {
-  const variantClass = `sh-btn--${variant}`;
-  // Handle default size class specially if needed, but I named it sh-btn--default-size
-  const sizeClass = size === 'default' ? 'sh-btn--default-size' : `sh-btn--${size}`;
-
-  // Start with base class
-  let classes = `sh-btn ${variantClass} ${sizeClass}`;
+  // We no longer generate BEM classes for variants/sizes.
+  // Instead, the component uses data attributes.
+  // We return the base class for consumers who need it (e.g. for consistency).
+  let classes = 'sh-button';
 
   if (className) {
     classes += ` ${className}`;

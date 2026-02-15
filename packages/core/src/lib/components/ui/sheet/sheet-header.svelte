@@ -18,3 +18,17 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  :global(.sh-sheet__header) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    text-align: center;
+  }
+  @media (min-width: 640px) {
+    :global(.sh-sheet__header) {
+      text-align: left;
+    }
+  }
+</style>

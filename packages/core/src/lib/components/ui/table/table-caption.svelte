@@ -18,3 +18,12 @@
 >
   {@render children?.()}
 </caption>
+
+<style>
+  .sh-table__caption {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--muted-foreground);
+  }
+</style>

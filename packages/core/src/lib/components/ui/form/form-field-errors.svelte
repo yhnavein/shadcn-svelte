@@ -24,3 +24,11 @@
     {/if}
   {/snippet}
 </FormPrimitive.FieldErrors>
+
+<style>
+  :global(.sh-form__message) {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--destructive);
+  }
+</style>

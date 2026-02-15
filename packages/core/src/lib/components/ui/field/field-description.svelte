@@ -18,3 +18,10 @@
 >
   {@render children?.()}
 </p>
+
+<style>
+  .sh-field__description {
+    font-size: 0.8rem;
+    color: var(--muted-foreground);
+  }
+</style>

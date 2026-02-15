@@ -29,3 +29,15 @@
     {@render children?.()}
   </a>
 {/if}
+
+<style>
+  :global(.sh-breadcrumb__link) {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+  }
+
+  :global(.sh-breadcrumb__link:hover) {
+    color: var(--foreground);
+  }
+</style>

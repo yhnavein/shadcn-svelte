@@ -15,3 +15,10 @@
   class={cn('sh-alert-dialog__description', className)}
   {...restProps}
 />
+
+<style>
+  .sh-alert-dialog__description {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+  }
+</style>

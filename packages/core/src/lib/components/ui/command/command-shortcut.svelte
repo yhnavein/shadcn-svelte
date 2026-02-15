@@ -18,3 +18,12 @@
 >
   {@render children?.()}
 </span>
+
+<style>
+  .sh-command__shortcut {
+    margin-left: auto;
+    font-size: 0.75rem; /* text-xs */
+    letter-spacing: 0.1em; /* tracking-widest */
+    color: var(--muted-foreground);
+  }
+</style>

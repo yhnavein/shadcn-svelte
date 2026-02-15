@@ -18,3 +18,19 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-drawer__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    .sh-drawer__header {
+      text-align: left;
+    }
+  }
+</style>

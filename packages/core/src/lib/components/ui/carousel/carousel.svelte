@@ -91,3 +91,9 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-carousel {
+    position: relative;
+  }
+</style>

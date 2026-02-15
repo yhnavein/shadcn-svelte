@@ -18,3 +18,10 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-card__content {
+    padding: 1.5rem;
+    padding-top: 0;
+  }
+</style>

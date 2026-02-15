@@ -17,3 +17,12 @@
   class={cn('sh-sidebar-separator', className)}
   {...restProps}
 />
+
+<style>
+  /* Sidebar Separator */
+  :global(.sh-sidebar-separator) {
+    background-color: var(--sidebar-border);
+    height: 1px;
+    width: 100%;
+  }
+</style>

@@ -14,3 +14,14 @@
   class={cn('sh-calendar__head-cell', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-calendar__head-cell) {
+    color: var(--muted-foreground);
+    width: var(--cell-size);
+    border-radius: var(--radius-md);
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+  }
+</style>

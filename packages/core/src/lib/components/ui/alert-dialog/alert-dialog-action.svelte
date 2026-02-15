@@ -14,5 +14,7 @@
   bind:ref
   data-slot="alert-dialog-action"
   class={cn(buttonVariants(), className)}
+  data-variant="default"
+  data-size="default"
   {...restProps}
 />

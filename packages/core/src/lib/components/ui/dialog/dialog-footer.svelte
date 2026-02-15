@@ -18,3 +18,18 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  :global(.sh-dialog__footer) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.5rem; /* gap-2 */
+  }
+
+  @media (min-width: 640px) {
+    :global(.sh-dialog__footer) {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+</style>

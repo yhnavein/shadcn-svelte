@@ -15,3 +15,12 @@
   class={cn('sh-command__empty', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-command__empty) {
+    padding-top: 1.5rem; /* py-6 */
+    padding-bottom: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem; /* text-sm */
+  }
+</style>

@@ -56,3 +56,18 @@ get along, so we shut typescript up by casting `value` to `never`.
   class={cn('sh-toggle-group', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-toggle-group) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    width: fit-content;
+    border-radius: var(--radius-md);
+  }
+
+  :global(.sh-toggle-group[data-spacing='0']) {
+    gap: 0;
+  }
+</style>

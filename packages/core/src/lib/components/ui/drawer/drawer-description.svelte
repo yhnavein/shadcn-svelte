@@ -15,3 +15,10 @@
   class={cn('sh-drawer__description', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-drawer__description) {
+    color: var(--muted-foreground);
+    font-size: 0.875rem;
+  }
+</style>

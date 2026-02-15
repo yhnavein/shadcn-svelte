@@ -146,3 +146,110 @@
     </div>
   </div>
 </TooltipPrimitive.Root>
+
+<style>
+  :global(.sh-chart__tooltip) {
+    display: grid;
+    min-width: 9rem;
+    align-items: flex-start;
+    gap: 0.375rem;
+    border-radius: var(--radius-lg);
+    border: 1px solid color-mix(in oklch, var(--border), transparent 50%);
+    background-color: var(--background);
+    padding: 0.375rem 0.625rem;
+    font-size: 0.75rem;
+    box-shadow:
+      0 20px 25px -5px rgb(0 0 0 / 0.1),
+      0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+
+  :global(.sh-chart__tooltip-label) {
+    font-weight: 500;
+  }
+
+  .sh-chart__tooltip-items {
+    display: grid;
+    gap: 0.375rem;
+  }
+
+  :global(.sh-chart__tooltip-item) {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  :global(.sh-chart__tooltip-item svg) {
+    width: 0.625rem;
+    height: 0.625rem;
+    color: var(--muted-foreground);
+  }
+
+  :global(.sh-chart__tooltip-item--dot) {
+    align-items: center;
+  }
+
+  :global(.sh-chart__tooltip-indicator) {
+    flex-shrink: 0;
+    border-radius: 2px;
+    border-color: var(--color-border);
+    background-color: var(--color-bg);
+  }
+
+  :global(.sh-chart__tooltip-indicator--dot) {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+
+  :global(.sh-chart__tooltip-indicator--line) {
+    width: 0.25rem;
+    height: 100%;
+  }
+
+  :global(.sh-chart__tooltip-indicator--dashed) {
+    width: 0;
+    border-width: 1.5px;
+    border-style: dashed;
+    background-color: transparent;
+  }
+
+  :global(.sh-chart__tooltip-indicator--dashed-nested) {
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
+  }
+
+  :global(.sh-chart__tooltip-content) {
+    display: flex;
+    flex: 1;
+    flex-shrink: 0;
+    justify-content: space-between;
+    line-height: 1;
+  }
+
+  :global(.sh-chart__tooltip-content--nested) {
+    align-items: flex-end;
+  }
+
+  :global(.sh-chart__tooltip-content--center) {
+    align-items: center;
+  }
+
+  .sh-chart__tooltip-name-container {
+    display: grid;
+    gap: 0.375rem;
+  }
+
+  .sh-chart__tooltip-name {
+    color: var(--muted-foreground);
+  }
+
+  .sh-chart__tooltip-value {
+    font-family:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+      monospace;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    color: var(--foreground);
+  }
+</style>

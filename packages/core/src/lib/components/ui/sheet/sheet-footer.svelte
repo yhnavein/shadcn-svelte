@@ -18,3 +18,18 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  :global(.sh-sheet__footer) {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 0.5rem;
+    margin-top: auto;
+  }
+  @media (min-width: 640px) {
+    :global(.sh-sheet__footer) {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+  }
+</style>

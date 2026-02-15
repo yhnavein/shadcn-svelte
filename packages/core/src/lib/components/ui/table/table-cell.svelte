@@ -13,3 +13,14 @@
 <td bind:this={ref} data-slot="table-cell" class={cn('sh-table__cell', className)} {...restProps}>
   {@render children?.()}
 </td>
+
+<style>
+  .sh-table__cell {
+    padding: 1rem;
+    vertical-align: middle;
+  }
+
+  .sh-table__cell:has(:global([role='checkbox'])) {
+    padding-right: 0;
+  }
+</style>

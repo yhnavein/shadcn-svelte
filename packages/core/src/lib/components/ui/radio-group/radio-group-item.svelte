@@ -24,3 +24,42 @@
     </div>
   {/snippet}
 </RadioGroupPrimitive.Item>
+
+<style>
+  :global(.sh-radio-group__item) {
+    aspect-ratio: 1 / 1;
+    height: 1rem;
+    width: 1rem;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    outline: none;
+  }
+
+  :global(.sh-radio-group__item:focus-visible) {
+    box-shadow: 0 0 0 1px var(--ring);
+  }
+
+  :global(.sh-radio-group__item:disabled) {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  :global(.sh-radio-group__item[aria-invalid='true']) {
+    border-color: var(--destructive);
+  }
+
+  .sh-radio-group__indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.sh-radio-group__icon) {
+    height: 0.875rem;
+    width: 0.875rem;
+    fill: currentColor;
+  }
+</style>

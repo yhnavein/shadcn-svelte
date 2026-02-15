@@ -1,12 +1,10 @@
 import Badge from './badge.svelte';
 import { type BadgeVariant } from './badge.svelte';
 
-function badgeVariants({
-  variant = 'default',
-  className = '',
-}: { variant?: BadgeVariant; className?: string } = {}) {
-  const variantClass = `sh-badge--${variant}`;
-  let classes = `sh-badge ${variantClass}`;
+function badgeVariants({ variant = 'default', className = '' } = {}) {
+  // We no longer generate BEM classes.
+  // Instead, the component uses data attributes.
+  let classes = 'sh-badge';
 
   if (className) {
     classes += ` ${className}`;

@@ -18,3 +18,13 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-drawer__footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+</style>

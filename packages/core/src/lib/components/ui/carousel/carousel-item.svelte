@@ -25,3 +25,20 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-carousel__item {
+    min-width: 0;
+    flex-shrink: 0;
+    flex-grow: 0;
+    flex-basis: 100%;
+  }
+
+  .sh-carousel__item[data-orientation='horizontal'] {
+    padding-inline-start: 1rem;
+  }
+
+  .sh-carousel__item[data-orientation='vertical'] {
+    padding-top: 1rem;
+  }
+</style>

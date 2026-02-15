@@ -12,6 +12,12 @@
 <NavigationMenuPrimitive.Item
   bind:ref
   data-slot="navigation-menu-item"
-  class={cn('relative', className)}
+  class={cn('sh-navigation-menu__item', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-navigation-menu__item) {
+    position: relative;
+  }
+</style>

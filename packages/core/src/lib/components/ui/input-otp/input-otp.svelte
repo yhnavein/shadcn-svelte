@@ -17,3 +17,20 @@
   class={cn('sh-input-otp', className)}
   {...restProps}
 />
+
+<style>
+  .sh-input-otp {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 1;
+  }
+
+  .sh-input-otp:has(:disabled) {
+    opacity: 0.5;
+  }
+
+  .sh-input-otp :global(input:disabled) {
+    cursor: not-allowed;
+  }
+</style>

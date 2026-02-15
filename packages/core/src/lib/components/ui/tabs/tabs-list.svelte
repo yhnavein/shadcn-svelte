@@ -11,3 +11,16 @@
   class={cn('sh-tabs__list', className)}
   {...restProps}
 />
+
+<style>
+  .sh-tabs__list {
+    display: inline-flex;
+    height: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background-color: var(--muted);
+    padding: 0.25rem;
+    color: var(--muted-foreground);
+  }
+</style>

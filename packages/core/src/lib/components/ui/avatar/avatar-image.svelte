@@ -15,3 +15,11 @@
   class={cn('sh-avatar__image', className)}
   {...restProps}
 />
+
+<style>
+  .sh-avatar__image {
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    width: 100%;
+  }
+</style>

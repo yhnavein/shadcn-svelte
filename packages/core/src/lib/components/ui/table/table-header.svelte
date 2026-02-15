@@ -18,3 +18,9 @@
 >
   {@render children?.()}
 </thead>
+
+<style>
+  thead :global(tr) {
+    border-bottom: 1px solid var(--border);
+  }
+</style>

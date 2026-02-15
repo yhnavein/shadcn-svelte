@@ -18,3 +18,9 @@
 >
   {@render children?.()}
 </tbody>
+
+<style>
+  tbody :global(tr:last-child) {
+    border-bottom: 0;
+  }
+</style>

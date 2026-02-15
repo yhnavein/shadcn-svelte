@@ -58,8 +58,8 @@ get along, so we shut typescript up by casting `value` to `never`.
   {#snippet children({ months, weekdays })}
     <Calendar.Months>
       <Calendar.Nav>
-        <Calendar.PrevButton variant={buttonVariant} />
-        <Calendar.NextButton variant={buttonVariant} />
+        <Calendar.PrevButton />
+        <Calendar.NextButton />
       </Calendar.Nav>
       {#each months as month, monthIndex (month)}
         <Calendar.Month>
@@ -110,3 +110,17 @@ get along, so we shut typescript up by casting `value` to `never`.
     </Calendar.Months>
   {/snippet}
 </CalendarPrimitive.Root>
+
+<style>
+  :global(.sh-calendar) {
+    background-color: var(--background);
+    padding: 0.75rem;
+    --cell-size: 2rem;
+    display: inline-block;
+  }
+
+  :global([data-slot='card-content'] .sh-calendar),
+  :global([data-slot='popover-content'] .sh-calendar) {
+    background-color: transparent;
+  }
+</style>

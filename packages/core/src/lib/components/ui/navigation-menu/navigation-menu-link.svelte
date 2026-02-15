@@ -12,9 +12,53 @@
 <NavigationMenuPrimitive.Link
   bind:ref
   data-slot="navigation-menu-link"
-  class={cn(
-    "data-[active=true]:focus:bg-accent data-[active=true]:hover:bg-accent data-[active=true]:bg-accent/50 data-[active=true]:text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus-visible:ring-ring/50 [&_svg:not([class*='text-'])]:text-muted-foreground flex flex-col gap-1 rounded-sm p-2 text-sm transition-all outline-none focus-visible:ring-[3px] focus-visible:outline-1 [&_svg:not([class*='size-'])]:size-4",
-    className
-  )}
+  class={cn('sh-navigation-menu__link', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-navigation-menu__link) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    border-radius: var(--radius-sm);
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    transition-property: all;
+    transition-duration: 150ms;
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  :global(.sh-navigation-menu__link:hover),
+  :global(.sh-navigation-menu__link:focus) {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
+
+  :global(.sh-navigation-menu__link[data-active='true']) {
+    background-color: color-mix(in srgb, var(--accent) 50%, transparent);
+    color: var(--accent-foreground);
+  }
+
+  :global(.sh-navigation-menu__link[data-active='true']:hover),
+  :global(.sh-navigation-menu__link[data-active='true']:focus) {
+    background-color: var(--accent);
+  }
+
+  :global(.sh-navigation-menu__link:focus-visible) {
+    outline: 1px solid var(--ring);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--ring) 50%, transparent);
+  }
+
+  :global(.sh-navigation-menu__link svg:not([class*='text-'])) {
+    color: var(--muted-foreground);
+  }
+
+  :global(.sh-navigation-menu__link svg:not([class*='size-'])) {
+    width: 1rem;
+    height: 1rem;
+  }
+</style>

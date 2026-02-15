@@ -18,3 +18,11 @@
 >
   {@render children?.()}
 </li>
+
+<style>
+  .sh-breadcrumb__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+  }
+</style>

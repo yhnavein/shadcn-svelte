@@ -19,3 +19,10 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-button-group {
+    display: flex;
+    width: 100%;
+  }
+</style>

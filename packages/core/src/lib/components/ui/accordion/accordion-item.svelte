@@ -14,3 +14,13 @@
   class="sh-accordion__item {className || ''}"
   {...restProps}
 />
+
+<style>
+  :global(.sh-accordion__item) {
+    border-bottom: 1px solid var(--border);
+  }
+
+  :global(.sh-accordion__item:last-child) {
+    border-bottom: 0;
+  }
+</style>

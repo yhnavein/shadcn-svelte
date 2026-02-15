@@ -19,3 +19,11 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  /* Sidebar Group Content */
+  .sh-sidebar-group-content {
+    width: 100%;
+    font-size: 0.875rem; /* text-sm */
+  }
+</style>

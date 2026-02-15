@@ -18,3 +18,18 @@
 >
   {@render children?.()}
 </div>
+
+<style>
+  .sh-alert-dialog__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+
+  @media (min-width: 640px) {
+    .sh-alert-dialog__header {
+      text-align: left;
+    }
+  }
+</style>

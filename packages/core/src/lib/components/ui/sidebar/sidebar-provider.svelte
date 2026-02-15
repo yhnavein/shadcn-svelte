@@ -48,3 +48,18 @@
     {@render children?.()}
   </div>
 </Tooltip.Provider>
+
+<style>
+  /* Sidebar Provider */
+  .sh-sidebar-provider {
+    --sidebar-width: 16rem;
+    --sidebar-width-icon: 3rem;
+    display: flex;
+    min-height: 100svh;
+    width: 100%;
+  }
+
+  .sh-sidebar-provider:has([data-variant='inset']) {
+    background-color: var(--sidebar);
+  }
+</style>

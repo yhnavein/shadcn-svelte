@@ -24,3 +24,9 @@
     <MinusIcon />
   {/if}
 </div>
+
+<style>
+  .sh-input-otp__separator {
+    /* Hook for separator styles */
+  }
+</style>

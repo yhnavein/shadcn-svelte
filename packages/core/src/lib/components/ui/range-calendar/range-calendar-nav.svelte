@@ -13,3 +13,13 @@
 <nav {...restProps} bind:this={ref} class={cn('sh-calendar__nav', className)}>
   {@render children?.()}
 </nav>
+
+<style>
+  .sh-calendar__nav {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+</style>

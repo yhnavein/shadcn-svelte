@@ -41,3 +41,21 @@
   {/if}
   <ScrollAreaPrimitive.Corner />
 </ScrollAreaPrimitive.Root>
+
+<style>
+  :global(.sh-scroll-area) {
+    position: relative;
+    overflow: hidden;
+  }
+
+  :global(.sh-scroll-area__viewport) {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+  }
+
+  :global(.sh-scroll-area__viewport:focus-visible) {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+  }
+</style>

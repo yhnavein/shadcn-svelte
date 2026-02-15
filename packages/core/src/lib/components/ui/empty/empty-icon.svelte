@@ -13,3 +13,16 @@
 <div bind:this={ref} data-slot="empty-icon" class={cn('sh-empty__icon', className)} {...restProps}>
   {@render children?.()}
 </div>
+
+<style>
+  .sh-empty__icon {
+    background-color: var(--muted);
+    margin-bottom: 1rem;
+    display: flex;
+    height: 5rem;
+    width: 5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px;
+  }
+</style>

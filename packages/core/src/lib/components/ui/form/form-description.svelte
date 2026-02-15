@@ -15,3 +15,10 @@
   class={cn('sh-form__description', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-form__description) {
+    font-size: 0.875rem;
+    color: var(--muted-foreground);
+  }
+</style>

@@ -18,3 +18,12 @@
 >
   {@render children?.()}
 </ul>
+
+<style>
+  :global(.sh-pagination__content) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25rem;
+  }
+</style>

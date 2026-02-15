@@ -7,9 +7,7 @@
     ref = $bindable(null),
     class: className,
     ...restProps
-  }: WithoutChildren<
-    WithElementRef<HTMLAttributes<HTMLSpanElement>>
-  > = $props();
+  }: WithoutChildren<WithElementRef<HTMLAttributes<HTMLSpanElement>>> = $props();
 </script>
 
 <span
@@ -17,9 +15,24 @@
   data-slot="breadcrumb-ellipsis"
   role="presentation"
   aria-hidden="true"
-  class={cn('flex size-9 items-center justify-center', className)}
+  class={cn('sh-breadcrumb__ellipsis', className)}
   {...restProps}
 >
-  <EllipsisIcon class="size-4" />
+  <EllipsisIcon class="sh-breadcrumb__ellipsis-icon" />
   <span class="sr-only">More</span>
 </span>
+
+<style>
+  .sh-breadcrumb__ellipsis {
+    display: flex;
+    height: 2.25rem;
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  :global(.sh-breadcrumb__ellipsis-icon) {
+    width: 1rem;
+    height: 1rem;
+  }
+</style>

@@ -56,3 +56,11 @@
     {/if}
   </div>
 {/if}
+
+<style>
+  .sh-field__error {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--destructive);
+  }
+</style>

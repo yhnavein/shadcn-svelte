@@ -18,3 +18,14 @@
 >
   {@render children?.()}
 </tfoot>
+
+<style>
+  .sh-table__footer {
+    background-color: color-mix(in oklch, var(--muted), transparent 50%);
+    font-weight: 500;
+  }
+
+  .sh-table__footer :global(> tr:last-child) {
+    border-bottom: 0;
+  }
+</style>

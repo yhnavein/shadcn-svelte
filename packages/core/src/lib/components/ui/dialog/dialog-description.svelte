@@ -15,3 +15,10 @@
   class={cn('sh-dialog__description', className)}
   {...restProps}
 />
+
+<style>
+  :global(.sh-dialog__description) {
+    font-size: 0.875rem; /* text-sm */
+    color: var(--muted-foreground);
+  }
+</style>

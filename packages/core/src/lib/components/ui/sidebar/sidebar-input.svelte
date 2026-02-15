@@ -19,3 +19,13 @@
   class={cn('sh-sidebar-input', className)}
   {...restProps}
 />
+
+<style>
+  /* Sidebar Input */
+  :global(.sh-sidebar-input) {
+    background-color: var(--background);
+    height: 2rem; /* h-8 */
+    width: 100%;
+    box-shadow: none;
+  }
+</style>
