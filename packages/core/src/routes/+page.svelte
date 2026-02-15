@@ -23,18 +23,18 @@
   let progressValue = $state(45);
 </script>
 
-<div class="mx-auto max-w-3xl space-y-10 p-8">
+<div class="preview-container">
   <div>
-    <h1 class="text-3xl font-bold">Component Showcase</h1>
-    <p class="text-muted-foreground mt-1">Quick preview of @puredev/shadcn-svelte-tw components</p>
+    <h1 class="heading-3xl">Component Showcase</h1>
+    <p class="text-muted mt-1">Quick preview of @puredev/shadcn-svelte components</p>
   </div>
 
   <Separator />
 
   <!-- Buttons -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Buttons</h2>
-    <div class="flex flex-wrap gap-3">
+  <section class="section">
+    <h2 class="heading-xl">Buttons</h2>
+    <div class="flex-wrap-gap">
       <Button>Default</Button>
       <Button variant="secondary">Secondary</Button>
       <Button variant="destructive">Destructive</Button>
@@ -44,7 +44,7 @@
       <Button disabled>Disabled</Button>
       <Button isLoading>Send</Button>
     </div>
-    <div class="flex flex-wrap gap-3">
+    <div class="flex-wrap-gap">
       <Button size="sm">Small</Button>
       <Button size="default">Default</Button>
       <Button size="lg">Large</Button>
@@ -54,9 +54,9 @@
   <Separator />
 
   <!-- Badges -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Badges</h2>
-    <div class="flex flex-wrap gap-3">
+  <section class="section">
+    <h2 class="heading-xl">Badges</h2>
+    <div class="flex-wrap-gap">
       <Badge>Default</Badge>
       <Badge variant="secondary">Secondary</Badge>
       <Badge variant="destructive">Destructive</Badge>
@@ -67,9 +67,9 @@
   <Separator />
 
   <!-- Card -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Card</h2>
-    <Card class="w-full max-w-sm">
+  <section class="section">
+    <h2 class="heading-xl">Card</h2>
+    <Card class="card-preview">
       <Card.Header>
         <Card.Title>Card Title</Card.Title>
         <Card.Description>Card description goes here.</Card.Description>
@@ -77,7 +77,7 @@
       <Card.Content>
         <p>This is the card content area. You can place any content here.</p>
       </Card.Content>
-      <Card.Footer class="flex justify-end gap-2">
+      <Card.Footer class="card-footer-preview">
         <Button variant="outline">Cancel</Button>
         <Button>Save</Button>
       </Card.Footer>
@@ -87,8 +87,8 @@
   <Separator />
 
   <!-- Accordion -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Accordion</h2>
+  <section class="section">
+    <h2 class="heading-xl">Accordion</h2>
     <Accordion type="single" class="w-full">
       <Accordion.Item value="item-1">
         <Accordion.Trigger>Is it accessible?</Accordion.Trigger>
@@ -102,9 +102,7 @@
       </Accordion.Item>
       <Accordion.Item value="item-3">
         <Accordion.Trigger>Is it animated?</Accordion.Trigger>
-        <Accordion.Content>
-          Yes. It's animated by default, using CSS animations from tw-animate-css.
-        </Accordion.Content>
+        <Accordion.Content>Yes. It's animated by default, using CSS animations.</Accordion.Content>
       </Accordion.Item>
     </Accordion>
   </section>
@@ -112,8 +110,8 @@
   <Separator />
 
   <!-- Tabs -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Tabs</h2>
+  <section class="section">
+    <h2 class="heading-xl">Tabs</h2>
     <Tabs value="account">
       <Tabs.List>
         <Tabs.Trigger value="account">Account</Tabs.Trigger>
@@ -127,11 +125,11 @@
             <Card.Description>Make changes to your account here.</Card.Description>
           </Card.Header>
           <Card.Content class="space-y-3">
-            <div class="space-y-1">
+            <div class="form-group">
               <Label for="name">Name</Label>
               <Input id="name" value="John Doe" />
             </div>
-            <div class="space-y-1">
+            <div class="form-group">
               <Label for="email">Email</Label>
               <Input id="email" value="john@example.com" />
             </div>
@@ -148,11 +146,11 @@
             <Card.Description>Change your password here.</Card.Description>
           </Card.Header>
           <Card.Content class="space-y-3">
-            <div class="space-y-1">
+            <div class="form-group">
               <Label for="current">Current password</Label>
               <Input id="current" type="password" />
             </div>
-            <div class="space-y-1">
+            <div class="form-group">
               <Label for="new">New password</Label>
               <Input id="new" type="password" />
             </div>
@@ -169,7 +167,7 @@
             <Card.Description>Manage your preferences.</Card.Description>
           </Card.Header>
           <Card.Content>
-            <p class="text-muted-foreground text-sm">Settings content goes here.</p>
+            <p class="text-muted text-sm">Settings content goes here.</p>
           </Card.Content>
         </Card>
       </Tabs.Content>
@@ -179,8 +177,8 @@
   <Separator />
 
   <!-- Alert -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Alerts</h2>
+  <section class="section">
+    <h2 class="heading-xl">Alerts</h2>
     <Alert>
       <Alert.Title>Heads up!</Alert.Title>
       <Alert.Description>You can add components to your app using the CLI.</Alert.Description>
@@ -194,15 +192,15 @@
   <Separator />
 
   <!-- Form controls -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Form Controls</h2>
-    <div class="grid max-w-sm gap-4">
-      <div class="space-y-1">
+  <section class="section">
+    <h2 class="heading-xl">Form Controls</h2>
+    <div class="form-grid">
+      <div class="form-group">
         <Label for="demo-input">Input</Label>
         <Input id="demo-input" placeholder="Type something..." />
       </div>
 
-      <div class="flex items-center gap-2">
+      <div class="flex-center-gap">
         <Checkbox
           id="demo-checkbox"
           checked={checkboxChecked}
@@ -211,7 +209,7 @@
         <Label for="demo-checkbox">Accept terms and conditions</Label>
       </div>
 
-      <div class="flex items-center gap-2">
+      <div class="flex-center-gap">
         <Switch id="demo-switch" bind:checked={switchChecked} />
         <Label for="demo-switch">
           Airplane mode {switchChecked ? '(on)' : '(off)'}
@@ -223,10 +221,10 @@
   <Separator />
 
   <!-- Progress -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Progress</h2>
+  <section class="section">
+    <h2 class="heading-xl">Progress</h2>
     <Progress value={progressValue} class="max-w-sm" />
-    <div class="flex gap-2">
+    <div class="flex-gap">
       <Button
         size="sm"
         variant="outline"
@@ -241,16 +239,16 @@
       >
         +10
       </Button>
-      <span class="text-muted-foreground text-sm leading-8">{progressValue}%</span>
+      <span class="text-muted text-sm leading-8">{progressValue}%</span>
     </div>
   </section>
 
   <Separator />
 
   <!-- Avatar -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Avatars</h2>
-    <div class="flex gap-3">
+  <section class="section">
+    <h2 class="heading-xl">Avatars</h2>
+    <div class="flex-gap">
       <Avatar>
         <Avatar.Image src="https://github.com/shadcn.png" alt="shadcn avatar" />
         <Avatar.Fallback>CN</Avatar.Fallback>
@@ -267,13 +265,13 @@
   <Separator />
 
   <!-- Skeleton -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Skeleton</h2>
-    <div class="flex items-center gap-4">
-      <Skeleton class="size-12 rounded-full" />
-      <div class="space-y-2">
-        <Skeleton class="h-4 w-48" />
-        <Skeleton class="h-4 w-32" />
+  <section class="section">
+    <h2 class="heading-xl">Skeleton</h2>
+    <div class="flex-center-gap skeleton-preview">
+      <Skeleton class="skeleton-avatar" />
+      <div class="form-group">
+        <Skeleton class="skeleton-text-lg" />
+        <Skeleton class="skeleton-text-sm" />
       </div>
     </div>
   </section>
@@ -281,8 +279,8 @@
   <Separator />
 
   <!-- Table -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Table</h2>
+  <section class="section">
+    <h2 class="heading-xl">Table</h2>
     <Table>
       <Table.Header>
         <Table.Row>
@@ -324,19 +322,19 @@
   <Separator />
 
   <!-- Resizable -->
-  <section class="space-y-3">
-    <h2 class="text-xl font-semibold">Resizable</h2>
-    <Resizable direction="horizontal">
+  <section class="section">
+    <h2 class="heading-xl">Resizable</h2>
+    <Resizable direction="horizontal" class="resizable-preview">
       <Resizable.Pane>
         <Resizable direction="vertical">
           <Resizable.Pane>
-            <div class="h-full w-full bg-gray-500">
+            <div class="resizable-box bg-gray">
               <p>Hello</p>
             </div>
           </Resizable.Pane>
           <Resizable.Handle />
           <Resizable.Pane>
-            <div class="h-full w-full bg-orange-500">
+            <div class="resizable-box bg-orange">
               <p>World</p>
             </div>
           </Resizable.Pane>
@@ -344,10 +342,173 @@
       </Resizable.Pane>
       <Resizable.Handle />
       <Resizable.Pane>
-        <div class="h-[200px] w-full bg-violet-500">
+        <div class="resizable-box bg-violet h-200">
           <p>Galaxy</p>
         </div>
       </Resizable.Pane>
     </Resizable>
   </section>
 </div>
+
+<style>
+  .preview-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 48rem; /* max-w-3xl */
+    padding: 2rem; /* p-8 */
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; /* space-y-10 approx */
+  }
+
+  .mt-1 {
+    margin-top: 0.25rem;
+  }
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; /* space-y-3 */
+  }
+
+  .heading-xl {
+    font-size: 1.25rem; /* text-xl */
+    line-height: 1.75rem;
+    font-weight: 600; /* font-semibold */
+  }
+
+  .heading-3xl {
+    font-size: 1.875rem; /* text-3xl */
+    line-height: 2.25rem;
+    font-weight: 700; /* font-bold */
+  }
+
+  .text-muted {
+    color: var(--muted-foreground);
+  }
+
+  .text-sm {
+    font-size: 0.875rem;
+  }
+
+  .font-medium {
+    font-weight: 500;
+  }
+
+  .flex-wrap-gap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem; /* gap-3 */
+  }
+
+  .flex-gap {
+    display: flex;
+    gap: 0.75rem; /* gap-3 */
+  }
+
+  .flex-center-gap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* gap-2 */
+  }
+
+  /* Card */
+  .card-preview {
+    width: 100%;
+    max-width: 24rem; /* max-w-sm */
+  }
+
+  .card-footer-preview {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+  }
+
+  /* Accordion */
+  .w-full {
+    width: 100%;
+  }
+
+  /* Tabs */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem; /* space-y-1 */
+  }
+
+  .space-y-3 > :global(*) + :global(*) {
+    margin-top: 0.75rem;
+  }
+
+  /* Form */
+  .form-grid {
+    display: grid;
+    max-width: 24rem; /* max-w-sm */
+    gap: 1rem; /* gap-4 */
+  }
+
+  /* Progress */
+  .max-w-sm {
+    max-width: 24rem;
+  }
+
+  .leading-8 {
+    line-height: 2rem;
+  }
+
+  /* Skeleton */
+  .skeleton-avatar {
+    width: 3rem; /* size-12 */
+    height: 3rem;
+    border-radius: 9999px;
+  }
+
+  .skeleton-text-lg {
+    height: 1rem; /* h-4 */
+    width: 12rem; /* w-48 */
+  }
+
+  .skeleton-text-sm {
+    height: 1rem; /* h-4 */
+    width: 8rem; /* w-32 */
+  }
+
+  /* Table */
+  .text-right {
+    text-align: right;
+  }
+
+  /* Resizable */
+  .resizable-preview {
+    min-height: 200px;
+    max-width: 100%;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+  }
+
+  .resizable-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .bg-gray {
+    background-color: oklch(0.554 0.046 257.417); /* Using muted-foreground roughly */
+    color: white;
+  }
+  .bg-orange {
+    background-color: oklch(0.627 0.265 303.9); /* chart-4 ish */
+    color: white;
+  }
+  .bg-violet {
+    background-color: oklch(0.646 0.222 41.116); /* chart-1 ish */
+    color: white;
+  }
+
+  .h-200 {
+    height: 200px;
+  }
+</style>
