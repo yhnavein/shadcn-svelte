@@ -1,84 +1,162 @@
-@layer base {
-  .sh-command {
-    @apply flex h-full w-full flex-col overflow-hidden rounded-md bg-popover text-popover-foreground;
-  }
+.sh-command {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+}
 
-  .sh-command__input-wrapper {
-    @apply flex h-9 items-center gap-2 border-b px-3;
-  }
+.sh-command__input-wrapper {
+  display: flex;
+  height: 2.25rem; /* h-9 */
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  border-bottom: 1px solid var(--border);
+  padding-left: 0.75rem; /* px-3 */
+  padding-right: 0.75rem;
+}
 
-  .sh-command__search-icon {
-    @apply size-4 shrink-0 opacity-50;
-  }
+.sh-command__search-icon {
+  width: 1rem; /* size-4 */
+  height: 1rem;
+  flex-shrink: 0;
+  opacity: 0.5;
+}
 
-  .sh-command__input {
-    @apply flex h-10 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50;
-  }
+.sh-command__input {
+  display: flex;
+  height: 2.5rem; /* h-10 */
+  width: 100%;
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  padding-top: 0.75rem; /* py-3 */
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem; /* text-sm */
+  outline: none;
+}
 
-  .sh-command__list {
-    @apply max-h-[300px] overflow-x-hidden overflow-y-auto;
-  }
+.sh-command__input::placeholder {
+  color: var(--muted-foreground);
+}
 
-  .sh-command__empty {
-    @apply py-6 text-center text-sm;
-  }
+.sh-command__input:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 
-  .sh-command__group {
-    @apply overflow-hidden p-1 text-foreground;
-  }
+.sh-command__list {
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 
-  .sh-command__group [cmdk-group-heading] {
-    @apply px-2 py-1.5 text-xs font-medium text-muted-foreground;
-  }
+.sh-command__empty {
+  padding-top: 1.5rem; /* py-6 */
+  padding-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem; /* text-sm */
+}
 
-  .sh-command__item {
-    @apply relative flex cursor-default select-none items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-none;
-    @apply data-[disabled]:pointer-events-none data-[disabled]:opacity-50;
-    @apply aria-selected:bg-accent aria-selected:text-accent-foreground;
-  }
+.sh-command__group {
+  overflow: hidden;
+  padding: 0.25rem; /* p-1 */
+  color: var(--foreground);
+}
 
-  .sh-command__item svg {
-    @apply pointer-events-none shrink-0 size-4;
-  }
+.sh-command__group [cmdk-group-heading] {
+  padding-left: 0.5rem; /* px-2 */
+  padding-right: 0.5rem;
+  padding-top: 0.375rem; /* py-1.5 */
+  padding-bottom: 0.375rem;
+  font-size: 0.75rem; /* text-xs */
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
 
-  .sh-command__item svg:not([class*='text-']) {
-    @apply text-muted-foreground;
-  }
+.sh-command__item {
+  position: relative;
+  display: flex;
+  cursor: default;
+  user-select: none;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  border-radius: 0.125rem; /* rounded-sm */
+  padding-left: 0.5rem; /* px-2 */
+  padding-right: 0.5rem;
+  padding-top: 0.375rem; /* py-1.5 */
+  font-size: 0.875rem; /* text-sm */
+  outline: none;
+}
 
-  .sh-command__shortcut {
-    @apply ml-auto text-xs tracking-widest text-muted-foreground;
-  }
+.sh-command__item[data-disabled='true'] {
+  pointer-events: none;
+  opacity: 0.5;
+}
 
-  .sh-command__separator {
-    @apply -mx-1 h-px bg-border;
-  }
+.sh-command__item[aria-selected='true'] {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
 
-  /* Command Dialog Overrides */
-  .sh-command-dialog .sh-command__input-wrapper {
-    @apply h-12;
-  }
+.sh-command__item svg {
+  pointer-events: none;
+  flex-shrink: 0;
+  width: 1rem; /* size-4 */
+  height: 1rem;
+}
 
-  .sh-command-dialog .sh-command__input-wrapper svg {
-    @apply h-5 w-5;
-  }
+.sh-command__item svg:not([class*='text-']) {
+  color: var(--muted-foreground);
+}
 
-  .sh-command-dialog .sh-command__input {
-    @apply h-12;
-  }
+.sh-command__shortcut {
+  margin-left: auto;
+  font-size: 0.75rem; /* text-xs */
+  letter-spacing: 0.1em; /* tracking-widest */
+  color: var(--muted-foreground);
+}
 
-  .sh-command-dialog .sh-command__group {
-    @apply px-2;
-  }
+.sh-command__separator {
+  margin-left: -0.25rem; /* -mx-1 */
+  margin-right: -0.25rem;
+  height: 1px;
+  background-color: var(--border);
+}
 
-  .sh-command-dialog .sh-command__group:not([hidden]) ~ .sh-command__group {
-    @apply pt-0;
-  }
+/* Command Dialog Overrides */
+.sh-command-dialog .sh-command__input-wrapper {
+  height: 3rem; /* h-12 */
+}
 
-  .sh-command-dialog .sh-command__item {
-    @apply px-2 py-3;
-  }
+.sh-command-dialog .sh-command__input-wrapper svg {
+  width: 1.25rem; /* h-5 w-5 */
+  height: 1.25rem;
+}
 
-  .sh-command-dialog .sh-command__item svg {
-    @apply h-5 w-5;
-  }
+.sh-command-dialog .sh-command__input {
+  height: 3rem; /* h-12 */
+}
+
+.sh-command-dialog .sh-command__group {
+  padding-left: 0.5rem; /* px-2 */
+  padding-right: 0.5rem;
+}
+
+.sh-command-dialog .sh-command__group:not([hidden]) ~ .sh-command__group {
+  padding-top: 0;
+}
+
+.sh-command-dialog .sh-command__item {
+  padding-left: 0.5rem; /* px-2 */
+  padding-right: 0.5rem;
+  padding-top: 0.75rem; /* py-3 */
+  padding-bottom: 0.75rem;
+}
+
+.sh-command-dialog .sh-command__item svg {
+  width: 1.25rem; /* h-5 w-5 */
+  height: 1.25rem;
 }
