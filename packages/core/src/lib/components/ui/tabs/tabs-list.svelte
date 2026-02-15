@@ -15,12 +15,12 @@
 <style>
   .sh-tabs__list {
     display: inline-flex;
-    height: 2.5rem;
+    height: 2.25rem;
     align-items: center;
     justify-content: center;
     border-radius: var(--radius-md);
     background-color: var(--muted);
-    padding: 0.25rem;
+    padding: 3px;
     color: var(--muted-foreground);
   }
 </style>

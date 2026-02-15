@@ -23,13 +23,15 @@
     justify-content: center;
     white-space: nowrap;
     border-radius: var(--radius-sm);
-    padding: 0.375rem 0.75rem;
+    padding: 0.25rem 0.5rem; /* px-2 py-1 */
     font-size: 0.875rem;
     font-weight: 500;
     gap: 0.375rem;
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
+    height: 100%;
+    border: 1px solid transparent; /* Align with TW border-transparent */
   }
 
   .sh-tabs__trigger:focus-visible {

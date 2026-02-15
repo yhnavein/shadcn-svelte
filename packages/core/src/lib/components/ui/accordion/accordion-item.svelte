@@ -18,6 +18,7 @@
 <style>
   :global(.sh-accordion__item) {
     border-bottom: 1px solid var(--border);
+    background-color: transparent;
   }
 
   :global(.sh-accordion__item:last-child) {

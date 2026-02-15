@@ -100,7 +100,7 @@
 
   /* Dark mode overrides */
   :global(.dark) .sh-input {
-    background-color: oklch(from var(--input) l c h / 0.3);
+    background-color: transparent;
   }
 
   /* Invalid state */

@@ -34,7 +34,7 @@
   :global(.sh-accordion__trigger) {
     display: flex;
     flex: 1;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -44,6 +44,7 @@
     transition-duration: 150ms;
     font-size: 0.875rem;
     text-align: start;
+    background-color: transparent;
   }
 
   :global(.sh-accordion__trigger:hover) {
