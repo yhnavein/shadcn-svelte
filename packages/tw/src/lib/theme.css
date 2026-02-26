@@ -1,3 +1,5 @@
+@source './**/*.{svelte,js,ts}';
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
